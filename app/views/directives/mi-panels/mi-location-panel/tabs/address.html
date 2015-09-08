@@ -1,0 +1,38 @@
+<div class="row no-stretch">
+	<div class="col-md-6">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Locations.Tabs.Address.Legends.Address.DisplayText}}</legend>
+			<mi-text-field mi-field-property="Resources.Location.Properties.Address1" ng-model="location.Address1"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Location.Properties.Address2" ng-model="location.Address2"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Location.Properties.Address3" ng-model="location.Address3"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Location.Properties.Address4" ng-model="location.Address4"></mi-text-field>
+		</fieldset>
+		<br />
+		<mi-text-field mi-field-property="Resources.Location.Properties.City" ng-model="location.City"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Location.Properties.State" ng-model="location.State"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Location.Properties.Zip" ng-model="location.Zip"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Location.Properties.Country" ng-model="location.Country"></mi-text-field>
+	</div>
+	<div class="col-md-6">
+		<mi-text-field mi-field-property="Resources.Location.Properties.ContactName" ng-model="location.ContactName"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Location.Properties.Reference" ng-model="location.Reference"></mi-text-field>
+		<mi-tel-field mi-field-property="Resources.Location.Properties.Phone" ng-model="location.Phone"></mi-tel-field>
+		<mi-fax-field mi-field-property="Resources.Location.Properties.Fax" ng-model="location.Fax"></mi-fax-field>
+		<mi-select-field mi-field-property="Resources.Location.Properties.Status" ng-model="location.Status"></mi-select-field>
+		<br />
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Locations.Tabs.Address.Legends.GeneralLedgerInterface.DisplayText}}</legend>
+			<mi-select-field mi-field-property="Resources.Location.Properties.AccountSetID" ng-model="location.AccountSetID"></mi-select-field>
+		</fieldset>
+	</div>
+</div>
+<br />
+<br />
+<div class="row no-stretch">
+	<div class="col-md-10 col-md-offset-1">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Locations.Tabs.Address.Legends.CASL.DisplayText}}</legend>
+			<mi-select-field mi-field-property="Resources.Location.Properties.SalesLocationID" ng-model="location.SalesLocationID"></mi-select-field>
+		</fieldset>
+	</div>
+</div>

@@ -1,0 +1,131 @@
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Dashboard</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSalesChart" ng-model="workflow.SalesChart"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSalesData" ng-model="workflow.SalesData"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowPurchasingChart" ng-model="workflow.PurchasingChart"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowPurchasingData" ng-model="workflow.PurchasingData"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowProductionChart" ng-model="workflow.ProductionChart"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowProductionData" ng-model="workflow.ProductionData"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowInventoryChart" ng-model="workflow.InventoryChart"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowInventoryData" ng-model="workflow.InventoryData"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Master Files</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowItems" ng-model="workflow.Items"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowBillsofMaterials" ng-model="workflow.BillsOfMaterial"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowLocations" ng-model="workflow.Locations"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSuppliers" ng-model="workflow.Suppliers"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowJobs" ng-model="workflow.Jobs"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowCustomers" ng-model="workflow.Customers"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Planning</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PlanSalesActivity" ng-model="workflow.PlanSalesActivity"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PlanPurchasingActivity" ng-model="workflow.PlanPurchasingActivity"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PlanProductionActivity" ng-model="workflow.PlanProductionActivity"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Sales</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSalesEstimates" ng-model="workflow.ShowSalesEstimates"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintSalesEstimates" ng-model="workflow.PrintSalesEstimates"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSalesQuotations" ng-model="workflow.ShowSalesQuotations"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintSalesEstimates" ng-model="workflow.PrintSalesEstimates"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSalesOrders" ng-model="workflow.ShowSalesOrders"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintSalesOrders" ng-model="workflow.SalesOrders"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSalesInvoices" ng-model="workflow.SalesInvoices"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintSalesInvoices" ng-model="workflow.SalesInvoices"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PlanSalesActivity" ng-model="workflow.SalesActivity"></mi-checkbox-field>
+				</fieldset>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Purchasing</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowPurchaseRequisitions" ng-model="workflow.ShowPurchaseRequisitions"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintPurchaseRequisitions" ng-model="workflow.PrintPurchaseRequisitions"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowPurchaseOrders" ng-model="workflow.ShowPurchaseOrders"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintPurchaseOrders" ng-model="workflow.PrintPurchaseOrders"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowPurchaseInvoices" ng-model="workflow.ShowPurchaseInvoices"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PlanPurchasingActivity" ng-model="workflow.PurchasingActivity"></mi-checkbox-field>
+				</fieldset>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Production</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowProductionOrders" ng-model="workflow.ShowProductionOrders"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PrintProductionOrders" ng-model="workflow.PrintProductionOrders"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PlanProductionActivity" ng-model="workflow.ProductionActivity"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Inventory Control</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PerformPhysicalInventory" ng-model="workflow.PerformPhysicalInventory"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PerformStockTransfers" ng-model="workflow.PerformStockTransfers"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Accounting</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowChartofAccounts" ng-model="workflow.ShowChartOfAccounts"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.PerformFiscalPeriodEnd" ng-model="workflow.PerformFiscalPeriodEnd"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Administration</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowCompanyProfile" ng-model="workflow.CompanyProfile"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowSecurityProfiles" ng-model="workflow.SecurityProfiles"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowDepartments" ng-model="workflow.Departments"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowWorkflows" ng-model="workflow.Workflows"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowUsers" ng-model="workflow.Users"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowHousekeeping" ng-model="workflow.Housekeeping"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<legend>Reports</legend>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowStandardReports" ng-model="workflow.ShowStandardReports"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.ShowCustomReports" ng-model="workflow.ShowCustomReports"></mi-checkbox-field>
+					<mi-checkbox-field mi-field-property="Resources.Workflows.Properties.CreateCustomReports" ng-model="workflow.CreateCustomReports"></mi-checkbox-field>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+</div>

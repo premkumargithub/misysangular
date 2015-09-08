@@ -1,0 +1,29 @@
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Items.Tabs.Stock.Legends.Defaults.DisplayText}}</legend>
+			<mi-text-field mi-field-property="Resources.Item.Properties.MaximumLevel" ng-model="item.MaximumLevel"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Item.Properties.ReorderLevel" ng-model="item.ReorderLevel"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Item.Properties.ReorderQuantity" ng-model="item.ReorderQuantity"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Item.Properties.MinimumLevel" ng-model="item.MinimumLevel"></mi-text-field>
+		</fieldset>
+	</div>
+	<div class="col-md-4">
+	
+		<mi-text-field mi-field-property="Resources.Item.Properties.LotSize" ng-model="item.LotSize"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.LeadInDays" ng-model="item.LeadInDays"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.Pick" ng-model="item.Pick"></mi-text-field>
+		
+	</div>
+	<div class="col-md-4">
+		<mi-text-field mi-field-property="Resources.Item.Properties.StockQuantity" ng-model="item.StockQuantity" ng-disabled="true"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.WipQuantity" ng-model="item.WipQuantity" ng-disabled="true"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.ReserveQuantity" ng-model="item.ReserveQuantity" ng-disabled="true"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.OnOrderQuantity" ng-model="item.OnOrderQuantity" ng-disabled="true"></mi-text-field>
+	</div>
+</div>
+<br />
+<mi-item-location-details-data-grid
+	item-resource-id="item.ResourceID"
+	editable="true"
+></mi-item-location-details-data-grid>

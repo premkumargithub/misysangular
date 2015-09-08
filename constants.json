@@ -1,0 +1,18 @@
+{
+	"local": {
+		"apiRoot":"https://127.0.0.1/api",
+		"version":"0.1.0"
+	},
+	"dev": {
+		"apiRoot":"https://dev-api.misysenterprise.com/api",
+		"version":"0.1.0"
+	},
+	"qa": {
+		"apiRoot":"https://qa-api.misysenterprise.com/api",
+		"version":"0.1.0"
+	},
+	"production": {
+		"apiRoot":"https://api.misysenterprise.com/api",
+		"version":"0.1.0"
+	}
+}

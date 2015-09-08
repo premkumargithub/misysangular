@@ -1,0 +1,36 @@
+div.panel-drop-down {
+  margin-bottom:0;
+  
+  .panel-heading {
+    background-color:#f4f4f4;
+		text-align:left;
+    
+    &:hover {
+      background-color:#f0f0f0;
+      cursor:pointer;
+    }
+  
+    h1 {
+      font-size:1em;
+      font-weight:bold;
+      margin:.15em 0;
+      padding:0;
+      
+      span.glyphicon {
+        font-size:.8em;
+        margin-right:.6em;
+      }
+    }
+  }
+  ul.list-group {
+    margin-bottom:0;
+		text-align:left;
+    
+    li:hover {
+      background-color:#e8e8e8;
+      cursor:pointer;
+			
+			transition: background-color 75ms linear;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+<div id="dashboard">
+	<div ng-show="appModeIsTrial()" class="trial-notification-container">
+		<div class="trial-notification">
+			<div class="message">
+				<span class="free-trial">Free Trial</span>
+				<span class="expires">Expires: 26 days</span>
+				<span class="subscribe">+ Subscribe</span>
+				<span class="starts-at">Starts at<br />$50/mth</span>
+			</div>
+		</div>
+	</div>
+	<div ng-show="appModeIsTest()" class="test-notification-container">
+		<div class="test-notification">
+			<span class="message">Test Mode</span>
+		</div>
+	</div>
+	
+	<fieldset>
+		<legend>{{companyName}}</legend>
+		<div class="row">
+			<div class="sales col-md-3 selected">
+				<h1>Sales</h1>
+				<pie-chart data="sales"></pie-chart>
+			</div>
+			<div class="purchasing col-md-3">
+				<h1>Purchasing</h1>
+				<pie-chart data="purchasing"></pie-chart>
+			</div>
+			<div class="production col-md-3">
+				<h1>Production</h1>
+				<pie-chart data="production"></pie-chart>
+			</div>
+			<div class="inventory-control col-md-3">
+				<h1>Inventory Control</h1>
+				<pie-chart data="inventoryControl"></pie-chart>
+			</div>
+		</div>
+		
+		<div class="data-grid">
+			<header>
+				<span class="title">Sales Performance Detail</span>
+				<div class="select-box">
+					<span>Last 7 Days <span class="caret"></span><span>
+				</div>
+			</header>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th>Order Date</th>
+						<th>Order #</th>
+						<th>Customer</th>
+						<th>Item #</th>
+						<th>Description</th>
+						<th>Unit Cost</th>
+						<th>Cost</th>
+						<th>Profit %</th>
+						<th>Delivery Date</th>
+						<th>On-Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="plus"><img src="images/plus.png" /></td>
+						<td>12/17/2016</td>
+						<td>65446778</td>
+						<td>Bill Smith Inc.</td>
+						<td>htc62726b</td>
+						<td>smartphone gla</td>
+						<td>$3.92</td>
+						<td>$8.99</td>
+						<td>48%</td>
+						<td>12/21/2016</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td class="plus"><img src="images/plus.png" /></td>
+						<td>12/17/2016</td>
+						<td>65446778</td>
+						<td>Bill Smith Inc.</td>
+						<td>htc62726b</td>
+						<td>smartphone gla</td>
+						<td>$3.92</td>
+						<td>$8.99</td>
+						<td>48%</td>
+						<td>12/21/2016</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td class="plus"><img src="images/plus.png" /></td>
+						<td>12/17/2016</td>
+						<td>65446778</td>
+						<td>Bill Smith Inc.</td>
+						<td>htc62726b</td>
+						<td>smartphone gla</td>
+						<td>$3.92</td>
+						<td>$8.99</td>
+						<td>48%</td>
+						<td>12/21/2016</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td class="plus"><img src="images/plus.png" /></td>
+						<td>12/17/2016</td>
+						<td>65446778</td>
+						<td>Bill Smith Inc.</td>
+						<td>htc62726b</td>
+						<td>smartphone gla</td>
+						<td>$3.92</td>
+						<td>$8.99</td>
+						<td>48%</td>
+						<td>12/21/2016</td>
+						<td>Yes</td>
+					</tr>
+				</tbody>
+			</table>
+			<footer>
+				<span class="show-more">+ show more</span>
+			<footer>
+		</div>
+	</fieldset>
+</div>

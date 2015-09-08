@@ -1,0 +1,66 @@
+<div id="company-profile" class="panel mi-resource-panel">
+	<form name="companyProfileForm" novalidate>
+		<header class="panel-heading asynchronous" ng-class="{loading: isLoading}">
+
+			<div class="primary-fields">
+				<div class="row">
+					<div class="col-md-4">
+						<mi-text-field ng-maxlength="8" mi-field-property="Resources.Company.CompanyProfile.Properties.CompanyID" ng-model="companyProfile.CompanyID" mi-readonly="false" ng-disabled="true" ng-required="true"></mi-text-field>
+					</div>
+					<div class="col-md-6">
+						<mi-text-field ng-maxlength="40" mi-field-property="Resources.Company.CompanyProfile.Properties.CompanyName" ng-model="companyProfile.CompanyName" mi-readonly="false" ng-required="true"></mi-text-field>
+					</div>
+				</div>
+			</div>
+			<div class="controls">
+				<div class="row">
+					<div class="col-md-4">
+						<mi-button
+							class="btn btn-success"
+							mi-button-click="btnSave()"
+							mi-button-disabled="saveDisabled() || panelForm.$invalid || panelForm.$pristine"
+							mi-button-text="{{::resourcesObj.Views.Home.MainContent.GenericPanel.SaveButton.DisplayText}}"
+							mi-button-loading-text="Saving"
+						></mi-button>
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-cancel" ng-click="btnCancel()">{{::resourcesObj.Views.Home.MainContent.GenericPanel.CancelButton.DisplayText}}</button>
+					</div>
+				</div>
+			</div>
+
+			<mi-template-tabs
+				template-url="contentTemplateUrl"
+				tabs-list="tabs"
+			></mi-template-tabs>
+		</header>
+		
+		<div class="panel-content asynchronous" ng-class="{loading: isLoading}" ng-include="contentTemplateUrl">
+		</div>
+		
+		<footer class="panel-footer ">
+			<div class="primary-fields">
+				<div class="row">
+					<h1 class="primary-fields col-md-10">{{companyProfile.CompanyID}} <span ng-if="true || seperationShown()">&nbsp;|&nbsp;</span> {{companyProfile.CompanyName}}</h1>
+				</div>
+			</div>
+			<div class="controls">
+				<div class="row">
+					<div class="col-md-4">
+						<mi-button
+							class="btn btn-success"
+							mi-button-click="btnSave()"
+							mi-button-disabled="saveDisabled() || panelForm.$invalid || panelForm.$pristine"
+							mi-button-text="{{::resourcesObj.Views.Home.MainContent.GenericPanel.SaveButton.DisplayText}}"
+							mi-button-loading-text="Saving"
+						></mi-button>
+					</div>
+					<div class="col-md-4">
+						<button class="btn btn-cancel" ng-click="btnCancel()" ng-disabled="cancelDisabled()">{{::resourcesObj.Views.Home.MainContent.GenericPanel.CancelButton.DisplayText}}</button>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix ng-scope"></div>
+		</footer>
+	</form>
+</div>

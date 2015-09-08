@@ -1,0 +1,26 @@
+<section class="panel mi-resource-panel">
+	<form name="panelForm" novalidate>
+		<header class="panel-heading asynchronous" ng-class="{loading: isLoading}">
+			<div class="no-stretch">
+				<div ng-include="headerTemplateUrl"></div>
+			</div>
+			
+			<mi-template-tabs
+				template-url="contentTemplateUrl"
+				tabs-list="tabs"
+			></mi-template-tabs>
+		</header>
+
+		<section class="panel-content asynchronous" ng-class="{loading: isLoading}">
+			<mi-http-alert-revisit class="no-stretch" mi-http-alert-trigger="miHttpAlertTriggerUpper"></mi-http-alert-revisit>
+			<ng-include src="contentTemplateUrl"></ng-include>
+			<mi-http-alert-revisit class="no-stretch" mi-http-alert-trigger="miHttpAlertTriggerLower"></mi-http-alert-revisit>
+		</section>
+		
+		<footer class="panel-footer asynchronous" ng-class="{loading: isLoading}">
+			<div class="no-stretch">
+				<ng-include src="footerTemplateUrl"></ng-include>
+			</div>
+		</footer>
+	</form>
+</section>

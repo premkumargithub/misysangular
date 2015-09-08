@@ -1,0 +1,24 @@
+.mi-accordian {
+	.mi-accordian-header {
+		cursor: pointer;
+		display: table;
+		font-size: 1.35em !important;
+		margin-top: .75em !important;
+		margin-bottom: .25em !important;
+		
+		&.expanded {
+			display: block;
+			background-color: #E9F0F4;
+			padding: .25em;
+			
+			&:before {
+				content: '- ';
+			}
+		}
+		&.contracted {
+			&:before {
+				content: '+ ';
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.home {
+	.mi-resource-panel {
+		header {
+			.primary-fields {
+				label {
+					font-weight:400 !important;
+				}
+			}
+		}
+		.panel-content {
+			font-size:.95em;
+			padding:.75em 2%;
+			padding-bottom:1.25em;
+			width:100%;
+			
+			& > *:first-child {
+				margin-top:0;
+				
+				&[ng-include] > *:first-child {
+					margin-top:0;
+				}
+			}
+			
+			div[class|=col-md] {
+				& > div[class|=col-md]:first-child, & > h1 + div[class|=col-md] {
+					padding-left:0;
+				}
+				& > div[class|=col-md]:last-child {
+					padding-right:0;
+				}
+			}
+			
+			div.alert {
+				margin:.5em 0;
+				padding-bottom:.25em;
+				padding-top:.25em;
+				width:100%;
+			}
+			
+			h1 {
+				color: #738FA8;
+				font-size: 1.25em;
+				font-weight: bold;
+				margin-bottom:.3em;
+				margin-left:.35em;
+				margin-top: 2em;
+			}
+		}
+		footer {
+			position:relative;
+		}
+	}
+}

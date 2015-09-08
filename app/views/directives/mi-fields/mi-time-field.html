@@ -1,0 +1,14 @@
+<div class="mi-field time">
+	<label>{{::displayText}}</label>
+	<div class="edit" ng-hide="isReadonly()">
+		<input class="form-control"
+			ng-model="displayModel"
+			ng-disabled="ngDisabled"
+			ng-readonly="ngReadonly"
+			type="text"
+		></input>
+	</div>
+	<div class="readonly" ng-show="isReadonly()">
+		<p>{{displayModel}} {{getDisplayUnits()}}</p>
+	</div>
+</div>

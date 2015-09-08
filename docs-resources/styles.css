@@ -1,0 +1,13 @@
+/* Redfining the widths of the sidebar and main columns */
+body > div.container > div.row > div.span3 {
+	width: 250px;
+}
+
+body > div.container > div.row > div.span9 {
+	width: 670px;
+}
+
+ul.nav.nav-list > li.api-list-item > a {
+	padding-bottom:4px;
+	padding-top:4px;
+}

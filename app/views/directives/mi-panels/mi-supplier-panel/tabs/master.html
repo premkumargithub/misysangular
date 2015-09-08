@@ -1,0 +1,82 @@
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.Address.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-12">
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.Status" ng-model="supplier.Status"></mi-select-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.CommonName" ng-model="supplier.CommonName" ng-maxlength="30"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.ShortName" ng-model="supplier.ShortName" ng-maxlength="12"></mi-text-field>
+<!--					<mi-text-field mi-field-property="Resources.Suppliers.Properties.AccountNo" ng-model="supplier.AccountNo" max-length="30"></mi-text-field>-->
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address1" ng-model="supplier.Address1"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address2" ng-model="supplier.Address2"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address3" ng-model="supplier.Address3"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address4" ng-model="supplier.Address4"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.City" ng-model="supplier.City"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.State" ng-model="supplier.State"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Zip" ng-model="supplier.Zip"></mi-text-field>
+					<mi-country-list-field mi-field-property="Resources.Suppliers.Properties.Country" ng-model="supplier.Country"></mi-country-list-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.MainTelephone" ng-model="supplier.MainTelephone"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.webURL" ng-model="supplier.Website"></mi-text-field>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="col-md-4">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.PrimaryContact.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-12">
+                    <button class="btn btn-success" ng-click="swapPermSecAddress()">Swap with Secondary</button>
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.Salutation" ng-model="supplier.PrimarySalutation"></mi-select-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.PrimaryFirstName" ng-model="supplier.PrimaryFirstName"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.PrimaryLastName" ng-model="supplier.PrimaryLastName"></mi-text-field>
+					<mi-tel-field mi-field-property="Resources.Suppliers.Properties.PrimaryTelephone" ng-model="supplier.PrimaryTelephone"></mi-tel-field>
+					<mi-tel-field mi-field-property="Resources.Suppliers.Properties.PrimaryMobile" ng-model="supplier.PrimaryMobile"></mi-tel-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.PrimaryEmail" ng-model="supplier.PrimaryEmail"></mi-text-field>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.SecondaryContact.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-12">
+                    <button class="btn btn-success" ng-click="swapPermSecAddress()">Swap with Primary</button>
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.Salutation" ng-model="supplier.SecondarySalutation"></mi-select-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.SecondaryFirstName" ng-model="supplier.SecondaryFirstName"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.SecondaryLastName" ng-model="supplier.SecondaryLastName"></mi-text-field>
+					<mi-tel-field mi-field-property="Resources.Suppliers.Properties.SecondaryTelephone" ng-model="supplier.SecondaryTelephone"></mi-tel-field>
+					<mi-tel-field mi-field-property="Resources.Suppliers.Properties.SecondaryMobile" ng-model="supplier.SecondaryMobile"></mi-tel-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.SecondaryEmail" ng-model="supplier.SecondaryEmail"></mi-text-field>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+
+	<div class="col-md-4">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.Default.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-12">
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.PayTerms" ng-model="supplier.PayTerms"></mi-select-field>
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.Currency" ng-model="supplier.Currency"></mi-select-field>
+
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.ShipVia" ng-model="supplier.ShipVia"></mi-text-field>
+
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.FobPoints" ng-model="supplier.FobPoints"></mi-text-field>
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.PoDelivery" ng-model="supplier.PoDelivery"></mi-select-field>
+
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.PoEmail" ng-model="supplier.PoEmail"></mi-text-field>
+
+
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.TaxStatus" ng-model="supplier.TaxStatus"></mi-text-field>
+
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.TaxAuth" ng-model="supplier.TaxAuth"></mi-text-field>
+
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.TaxID" ng-model="supplier.TaxID"></mi-text-field>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>

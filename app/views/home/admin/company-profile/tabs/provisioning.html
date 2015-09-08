@@ -1,0 +1,26 @@
+<div class="row">
+		<div class="col-md-8">
+		<fieldset ><!-- Production -->
+			<div class="col-md-6">
+				<mi-checkbox-field 
+				    mi-field-property="Resources.Company.CompanyProfile.Provisioning.BasicInventory" ng-model="companyProfile.AutomateTransferFinishedOnClose">
+				</mi-checkbox-field>
+				<mi-select-field 
+					mi-field-property="Resources.Company.CompanyProfile.Provisioning.Integration" 
+					ng-model="companyProfile.Integration">
+				</mi-select-field>
+				<mi-text-field
+				    mi-field-property="Resources.Company.CompanyProfile.Provisioning.NumberOfUsers"
+				    ng-model="companyProfile.NumberOfUsers"
+				    mi-readonly="false"
+				    ng-required="true">
+				</mi-text-field>
+			</div>
+			<label class="col-md-6">Based on the configuration you have selected, your next subscription billing will be at the rate of $x/month.</label>
+		</fieldset>
+		</div><!-- col-md-8 -->
+		<div class="col-md-4">
+
+		</div><!-- col-md-4 -->
+	
+</div><!-- row -->

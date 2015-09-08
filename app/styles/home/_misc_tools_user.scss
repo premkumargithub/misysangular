@@ -1,0 +1,39 @@
+div.home section.primary header ul.misc-tools li.user {
+	min-width:12.5em;
+
+	span.caret {
+		border-top-color: #aaa;
+		border-bottom-color: #aaa;
+	}
+	
+	ul {
+		list-style-type: none;
+		padding-left:0;
+		
+		li {
+			cursor: pointer;
+			
+			&:hover {
+				background-color:#E8E8E8;
+			}
+			
+			a {
+				display:block;
+				height:100%;
+				padding: 0.4em 2em;
+				text-align: left;
+				width:100%;
+				
+				&.no-decoration {
+					color:#888888;
+					text-decoration:none;
+				}
+				&.no-wrap {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}

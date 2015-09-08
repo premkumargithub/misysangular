@@ -1,0 +1,84 @@
+<div class="row">
+	<div class="col-md-4">
+		<fieldset>
+			<legend>Primary Credit Card</legend>
+			<mi-checkbox-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.UseThisPaymentOption" ng-model="paymentOptions.PrimaryCreditCardActive" ng-disabled="formDisabled()" value="1"></mi-checkbox-field>
+			<mi-text-field ng-maxlength="20" mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.CardownerName" ng-model="paymentOptions.PrimaryCardOwnerName" mi-readonly="false"  ng-required="true"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.CardNumber" ng-model="paymentOptions.PrimaryCardNumber" mi-readonly="false"  ng-required="true"></mi-text-field>
+			<div class="row">
+				<div class="col-md-12">
+					<label>Expiration Date</label>
+				</div>
+				<div class="col-md-4">
+					<mi-select-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.cardMonth" ng-model="paymentOptions.PrimaryCardMonth"></mi-select-field>
+				</div>
+				<div class="col-md-4">
+					<mi-select-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.cardYear" ng-model="paymentOptions.PrimaryCardYear"></mi-select-field>
+				</div>
+			</div>
+			<!--
+			<br>
+			<mi-button class="btn btn-success col-md-3" mi-button-text="save"></mi-button>
+-->
+		</fieldset>
+	</div>
+	<!-- col-md-4 -->
+	<div class="col-md-4">
+		<fieldset>
+			<legend>Secondary Credit Card</legend>
+			<mi-checkbox-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.UseThisPaymentOption" ng-model="paymentOptions.SecondaryCreditCardActive" ng-disabled="formDisabled()" value="2"></mi-checkbox-field>
+			<mi-text-field ng-maxlength="20" mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.CardownerName" ng-model="paymentOptions.SecondaryCardOwnerName" mi-readonly="false"  ng-required="true"></mi-text-field>
+
+			<mi-text-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.CardNumber" ng-model="paymentOptions.SecondaryCardNumber" mi-readonly="false"  ng-required="true"></mi-text-field>
+			<div class="row">
+				<div class="col-md-12">
+					<label>Expiration Date</label>
+				</div>
+				<div class="col-md-4">
+					<mi-select-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.cardMonth" ng-model="paymentOptions.SecondaryCardMonth"></mi-select-field>
+				</div>
+				<div class="col-md-4">
+					<mi-select-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.cardYear" ng-model="paymentOptions.SecondaryCardYear"></mi-select-field>
+				</div>
+			</div>
+			<!--
+			<br>
+<mi-button class="btn btn-success col-md-3" mi-button-text="save"></mi-button>
+-->
+
+		</fieldset>
+	</div>
+	<!-- col-md-4 -->
+	<div class="col-md-4">
+		<fieldset>
+			<legend>eCheck Direct Withdrawal</legend>
+			<mi-checkbox-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.UseThisPaymentOption" ng-model="paymentOptions.ECheckDirectWithdrawlActive" ng-disabled="formDisabled()" value="3"></mi-checkbox-field>
+			<mi-text-field ng-maxlength="20" mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.BankAccountNumber" ng-model="paymentOptions.ECheckBankAccountNumber" mi-readonly="false"  ng-required="true"></mi-text-field>
+
+			<mi-text-field mi-field-property="Resources.Company.CompanyProfile.PaymentHistory.BankRoutingNumber" ng-model="paymentOptions.ECheckBankRoutingNumber" mi-readonly="false"  ng-required="true"></mi-text-field>
+
+<!--
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<mi-button class="btn btn-success col-md-3" mi-button-text="save"></mi-button>
+				</div>
+			</div>
+-->
+
+		</fieldset>
+	</div>
+	<!-- col-md-4 -->
+</div>
+
+<div class="row  no-stretch">
+	<div class="col-md-12">
+		<label>Payment History</label>
+	</div>
+	<div class="col-md-12">
+		<mi-payment-history-data-grid contractable=""></mi-payment-history-data-grid>
+	</div>
+</div>

@@ -1,0 +1,58 @@
+button.mi-button {
+    margin: 0 0px;
+	& > span {
+		display:block;
+		opacity: 1;
+		transition: opacity 400ms ease-in-out;
+		
+		&.mi-button-hidden {
+			height:0;
+			opacity:0;
+			transition: opacity 0ms ease-in-out;
+			width:0;
+		}
+		
+		span.dot {
+			opacity: 1;
+			transition: opacity 225ms ease-in-out;
+			
+			&.mi-hidden {
+				opacity:0;
+			}
+		}
+	}
+}
+
+.btn {
+	font-weight:bold;
+	padding-left:0;
+	padding-right:0;
+	text-transform:uppercase;
+	
+	&.btn-success {
+		background-image: $green-gradient-1;
+		
+		&:hover, &:active {
+			background-image: $green-gradient-2;
+		}
+	}
+
+	&.btn-cancel {
+		background-image: $light-green-gradient-1;
+		border-color:#b7c8ad;
+		color:#fff;
+			
+		&:hover, &:active, &:focus {
+			background-image: $light-green-gradient-2;
+			color:#fff;
+		}
+	}
+
+	&.btn-primary {
+		background-image: linear-gradient($misys-blue, #428BCA);
+		
+		&:hover, &:active {
+			background-image: linear-gradient(#428BCA, $misys-blue);
+		}
+	}
+}

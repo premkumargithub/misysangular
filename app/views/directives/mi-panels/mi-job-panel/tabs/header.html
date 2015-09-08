@@ -1,0 +1,47 @@
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<mi-select-field mi-field-property="Resources.Jobs.Properties.Status" ng-model="job.Status"></mi-select-field>
+	</div>
+</div>
+<div class="row no-stretch">
+	<div class="col-md-12">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Jobs.Tabs.Header.Legends.AccumulatedCosts.DisplayText}}</legend>
+			<div class="col-md-6">
+				<mi-number-field mi-field-property="Resources.Jobs.Properties.AccumulatedStockCost" mi-number-field-type="ExtendedCost" ng-model="job.AccumulatedStockCost" ng-disabled="true"></mi-number-field>
+				<mi-number-field mi-field-property="Resources.Jobs.Properties.AccumulatedWipCost" mi-number-field-type="ExtendedCost" ng-model="job.AccumulatedWipCost" ng-disabled="true"></mi-number-field>
+				<mi-number-field mi-field-property="Resources.Jobs.Properties.AccumulatedReserveCost" mi-number-field-type="ExtendedCost" ng-model="job.AccumulatedReserveCost" ng-disabled="true"></mi-number-field>
+			</div>
+			<div class="col-md-6">
+				<mi-number-field mi-field-property="Resources.Jobs.Properties.AccumulatedOrderCost" mi-number-field-type="ExtendedCost" ng-model="job.AccumulatedOrderCost" ng-disabled="true"></mi-number-field>
+				<mi-number-field mi-field-property="Resources.Jobs.Properties.AccumulatedUsedCost" mi-number-field-type="ExtendedCost" ng-model="job.AccumulatedUsedCost" ng-disabled="true"></mi-number-field>
+				<mi-number-field mi-field-property="Resources.Jobs.Properties.AccumulatedReceivedCost" mi-number-field-type="ExtendedCost" ng-model="job.AccumulatedReceivedCost" ng-disabled="true"></mi-number-field>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Jobs.Tabs.Header.Legends.PurchasingCosts.DisplayText}}</legend>
+			<div class="col-md-6">
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Jobs.Tabs.Header.Legends.ProductionCosts.DisplayText}}</legend>
+			<div class="col-md-6">
+			</div>
+			<div class="col-md-6">
+			</div>
+		</fieldset>
+	</div>
+</div>
+<div class="row no-stretch">
+	<div class="col-md-8">
+		<fieldset>
+			<legend>{{::resourcesObj.Resources.Jobs.Properties.DocumentPath.DisplayText}}</legend>
+			<input type="file" ng-model="job.DocumentPath" />
+		</fieldset>
+	</div>
+	<div class="col-md-4">
+		<fieldset>
+			<legend>General Ledger Interface</legend>
+		</fieldset>
+	</div>
+</div>

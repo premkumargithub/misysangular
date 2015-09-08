@@ -1,0 +1,163 @@
+@import 'mixins';
+@import 'variables';
+
+@import 'bootstrap/nav-tabs';
+
+//Styles for any visual directives
+@import 'directives/mi-accordian';
+@import 'directives/mi-caps-tooltip';
+@import 'directives/mi-button';
+@import 'directives/mi-data-grid';
+@import 'directives/mi-field';
+@import 'directives/mi-help-menu';
+@import 'directives/mi-http-alert';
+@import 'directives/mi-tooltip';
+@import 'directives/mi-modal-window';
+@import 'directives/panel-drop-down';
+@import 'directives/password-strength-meter';
+@import 'directives/pie-chart';
+@import 'directives/mi-panel';
+@import 'directives/mi-panels/item';
+
+@import 'misys-base';								//For whole whole app
+@import 'home/base';								//Home styles
+@import 'home/dashboard/base';
+@import 'home/misc_tools';
+@import 'home/misc_tools_application-mode-controls';
+@import 'home/misc_tools_user';
+@import 'home/misc_tools_messages';
+@import 'home/resource-panel';
+@import 'home/admin/users';
+@import 'home/admin/company-profile';
+@import 'login/login';
+@import 'login/password-recovery/password-reset';
+@import 'login/register/step-one';
+@import 'login/register/confirm';
+@import 'messaging/window'; 				//Window that holds most messaging functionality
+@import 'tags/a';
+@import 'tags/input';
+@import 'tags/select';
+@import 'tags/table';
+@import 'tags/textarea';
+
+@-ms-viewport {
+	width: auto !important;
+}
+
+html, body {
+	font-family: Arial, sans-serif !important;
+	height:100%;
+	margin:0;
+	min-height:100%;
+	padding:0;
+	width:100%;
+}
+
+html {
+	min-width:1026px;
+	
+	&.js .js-disabled {
+		display: none !important;
+	}
+	
+	&.textshadow .old-browser {
+		display:none !important;
+	}
+	
+	&.no-js .old-browser {
+		display:none !important;
+	}
+	
+	&.no-js .browser-message, &.no-textshadow .browser-message {
+		background-color:#fff;
+		height:100%;
+		left:0;
+		position:fixed;
+		top:0;
+		width:100%;
+	}
+	
+	.browser-message {
+		margin:0;
+		padding:0;
+		
+		h1 {
+			background-color:$misys-blue !important;
+			box-shadow: 0 0px 15px 5px #666;
+			color:#fff;
+			font-size:1.5em;
+			margin:0;
+			padding:1em 0;
+			text-align:center;
+			
+			a {
+				color:#fff;
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+body {
+	& > #image-preload {
+		display:none;
+		img { display:none; }
+	}
+	
+	& > .container {
+		height:100%;
+		padding:0;
+		width:100%;
+	}
+}
+
+/*
+	When an asynchronous element is loading, position a pseudo-element in front of it.
+	This requires some attention to the height of the asynchronous element. It will
+	likely be very short until it is done loading, so make sure to give it a fake height
+	as it loads. A simple rule for this is: {yourElementSelector}.loading { height:...; }
+*/
+.asynchronous {
+	position:relative;
+
+	&:after {
+		background-color: #EEE;
+		content:"";
+		display:block;
+		height:0%;
+		opacity: 0;
+		position:absolute;
+		top:0;
+		transition: opacity 500ms ease-in-out 0ms, height 0ms ease-in-out 500ms;
+		width:100%;
+	}
+	
+	&.loading {
+		&:after {
+			background-image: url('/images/loading.gif');
+			background-position: 50%;
+			background-repeat: no-repeat;
+			background-size: 7.5%;
+			height:100%;
+			opacity: 1;
+			
+		}
+	}
+}
+
+section.asynchronous.loading {
+	max-height:15em;
+}
+
+.asynchronous.loading {
+	overflow:hidden;
+	
+	& * {
+		visibility:hidden;
+	}
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}

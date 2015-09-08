@@ -1,0 +1,79 @@
+<div ng-controller="CompanyPreferencesCtrl">
+    <div class="col-md-12">
+        <div ng-show="r.show" class="alert alert-{{r.status}}" role="alert">
+            <button type="button" class="close" ng-click="r.show = false"><span aria-hidden="true">&times;</span></button>
+            {{r.message}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset><!-- Accounting -->
+                <legend>Accounting</legend>
+                <mi-select-field
+                    mi-field-property="Resources.Company.CompanyProfile.Properties.Integration"
+                    ng-model="companyPreference.AccountingIntegration">
+                </mi-select-field>
+                <mi-select-field mi-field-property="Resources.Company.CompanyProfile.Properties.CostingMethod" ng-model="companyPreference.AccountingCostingMethod"></mi-select-field>
+            </fieldset>
+        </div><!-- col-md-4 -->
+    </div><!-- row -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset><!-- Sales -->
+                <legend>Sales</legend>
+                <mi-checkbox-field
+                       mi-field-property="Resources.Company.CompanyProfile.Preferences.Sales.CreateSalesEstimates" ng-model="companyPreference.IsCreateSalesEstimates">
+                </mi-checkbox-field>
+                <mi-checkbox-field
+                       mi-field-property="Resources.Company.CompanyProfile.Preferences.Sales.CreateSalesQuotations" ng-model="companyPreference.IsCreateSalesQuotations">
+                </mi-checkbox-field>
+                <mi-checkbox-field
+                       mi-field-property="Resources.Company.CompanyProfile.Preferences.Sales.CreateSalesConfirmations" ng-model="companyPreference.IsCreateSalesConfirmations">
+                </mi-checkbox-field>
+                <mi-checkbox-field
+                       mi-field-property="Resources.Company.CompanyProfile.Preferences.Sales.CreateSalesInvoices" ng-model="companyPreference.IsCreateSalesInvoices">
+                </mi-checkbox-field>
+            </fieldset>
+        </div><!-- col-md-4 -->
+    </div><!-- row -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset><!-- Purchasing -->
+                <legend>Purchasing</legend>
+                <mi-checkbox-field
+                       mi-field-property="Resources.Company.CompanyProfile.Preferences.Purchasing.CreatePurchaseRequisitions" ng-model="companyPreference.IsPurchaseRequisitions">
+                </mi-checkbox-field>
+            </fieldset>
+        </div><!-- col-md-4 -->
+    </div><!-- row -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset><!-- Production -->
+                <legend>Production</legend>
+                <mi-checkbox-field
+                       mi-field-property="Resources.Company.CompanyProfile.Preferences.Production.AutomateTransferFinishedOnClose" ng-model="companyPreference.IsProductionAutoTransferOnClose">
+                </mi-checkbox-field>
+            </fieldset>
+        </div><!-- col-md-4 -->
+    </div><!-- row -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset><!-- Inventory Control -->
+                <legend>Inventory Control</legend>
+                <mi-select-field
+                    mi-field-property="Resources.Company.CompanyProfile.Preferences.InventoryControl.PhysicalInventory" ng-model="companyPreference.PhysicalInvertoryControl">
+                </mi-select-field>
+            </fieldset>
+        </div><!-- col-md-4 -->
+    </div><!-- row -->
+    <div class="col-md-12">
+        <div ng-show="r.show" class="alert alert-{{r.status}}" role="alert">
+            <button type="button" class="close" ng-click="r.show = false"><span aria-hidden="true">&times;</span></button>
+            {{r.message}}
+        </div>
+    </div>
+</div>

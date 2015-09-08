@@ -1,0 +1,8 @@
+textarea {
+	&.form-control {
+		padding:.5em;
+		max-width:100%;
+		resize: none;
+		width:100%;
+	}
+}

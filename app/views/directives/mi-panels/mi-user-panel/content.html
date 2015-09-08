@@ -1,0 +1,73 @@
+<div class="row">
+	<div class="col-md-4">
+
+		<fieldset>
+			<legend>Company</legend>
+			<mi-select-field mi-field-property="Resources.User.Properties.AccountStatus" ng-model="user.AccountStatus"></mi-select-field>
+			<mi-text-field mi-field-property="Resources.User.Properties.ShortName" ng-model="user.ShortName" ng-maxlength="40" ng-pattern="/^[a-zA-Z]*$/"></mi-text-field>
+			<mi-tel-field mi-field-property="Resources.User.Properties.Telephone" ng-model="user.Telephone"></mi-tel-field>
+			<mi-tel-field mi-field-property="Resources.User.Properties.Mobile" ng-model="user.Mobile"></mi-tel-field>
+
+			<mi-email-field mi-field-property="Resources.User.Properties.EmailAddress" ng-model="user.EmailAddress" ng-maxlength="40" ng-required="true"></mi-email-field>
+
+			<mi-finder-field mi-field-property="Resources.User.Properties.Department" grid-tag="mi-department-data-grid" grid-class="department" ng-model="user.DepartmentResourceID"></mi-finder-field>
+			<mi-finder-field mi-field-property="Resources.User.Properties.SecurityProfile" grid-tag="mi-security-profiles-data-grid" grid-class="security" ng-model="user.SecurityProfileResourceID"></mi-finder-field>
+			<mi-finder-field mi-field-property="Resources.User.Properties.Workflow" grid-tag="mi-users-data-grid" grid-class="users" ng-model="user.UserProfileResourceID"></mi-finder-field>
+
+		</fieldset>
+	</div>
+
+	<div class="col-md-4">
+		<fieldset>
+			<legend>Password Reset</legend>
+			<mi-password-field mi-field-property="Resources.User.Properties.Password" mi-field-placeholder="" ng-model="user.Password" ng-required="controls.Password.required()" ng-disabled="formDisabled()" validate="true" ng-maxlength="40"></mi-password-field>
+			<div password-strength-meter password="user.Password"></div>
+			<label for="verifyPassword">{{::resourcesObj.Views.Home.Admin.Submenus.Admin.Users.VerifyPassword.DisplayText}}</label>
+			<input id="verifyPassword" name="verifyPassword" class="form-control" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" ng-model="user.verifyPassword" equal="user.Password" ng-required="user.Password.length > 0 || passwordRequired()" ng-readonly="formDisabled()" maxlength="40" />
+
+			<div class="equal" ng-class="{invisible:!user.Password}">
+				<div class="alert alert-success" ng-hide="panelForm.verifyPassword.$error.equal">{{::resourcesObj.Views.Home.Admin.Submenus.Admin.Users.PasswordsMatch.DisplayText}}</div>
+				<div class="alert alert-danger" ng-show="panelForm.verifyPassword.$error.equal">{{::resourcesObj.Views.Home.Admin.Submenus.Admin.Users.PasswordsDoNotMatch.DisplayText}}</div>
+			</div>
+
+			<mi-button class="btn btn-success reset-password col-md-7" mi-button-click="controls.resetPasswordBtn.click(panelForm.verifyPassword.$error)" mi-button-text="Reset Password" mi-button-disabled="controls.resetPasswordBtn.disabled()" mi-button-loading-text="Resetting Password"></mi-button>
+
+			<!--			<mi-checkbox-field mi-field-property="Resources.User.Properties.ResetPasswordOption" ng-model="user.ResetPasswordOption" ng-disabled="controls.ResetPasswordOption.disabled() || formDisabled()"></mi-checkbox-field>-->
+		</fieldset>
+
+		<fieldset>
+			<legend>Enhanced Security</legend>
+			<mi-checkbox-field mi-field-property="Resources.User.Properties.RequireResetPasswordSecAnswer" ng-model="user.RequireResetPasswordSecAnswer" ng-disabled="formDisabled()"></mi-checkbox-field>
+			<mi-checkbox-field mi-field-property="Resources.User.Properties.SendEmailForEachLogin" ng-model="user.SendEmailForEachLogin" ng-disabled="formDisabled()"></mi-checkbox-field>
+			<mi-text-field mi-field-property="Resources.User.Properties.SecurityQuestion" ng-model="user.SecurityQuestion" ng-required="controls.SecurityQuestion.required()" ng-readonly="formDisabled()" ng-maxlength="60"></mi-text-field>
+			<mi-text-field mi-field-property="Resources.User.Properties.SecurityAnswer" ng-model="user.SecurityAnswer" ng-required="controls.SecurityAnswer.required()" ng-readonly="formDisabled()" ng-maxlength="60"></mi-text-field>
+			<mi-select-field mi-field-property="Resources.User.ProxyProperties.AskSecurityQuestionOnLogin" ng-model="user.AskSecurityQuestionOnLogin" ng-disabled="controls.AskSecurityQuestionOnLogin.disabled()"></mi-select-field>
+			<!--			<mi-checkbox-field mi-field-property="Resources.User.Properties.RequireResetPasswordSecAnswer" ng-model="user.RequireResetPasswordSecAnswer" ng-disabled="formDisabled()"></mi-checkbox-field>-->
+		</fieldset>
+
+	</div>
+	<div class="col-md-4">
+		<fieldset>
+			<legend>System Administrator</legend>
+			<mi-text-field mi-field-property="Resources.User.Properties.CurrentSystemAdministrator" ng-model="user.CurrentSystemAdministrator" ng-readonly="true"></mi-text-field>
+			<br>
+				<mi-select-field class="col-md-8" style="padding-left:0" mi-field-property="Resources.User.Properties.ConfirAdministartorStatusTo" ng-model="user.ConferAdministartorStatusTo"></mi-select-field>
+				<mi-button class="btn btn-success col-md-4" mi-button-text="Confer"></mi-button>
+
+		</fieldset>
+		<fieldset>
+			<legend>Session Management</legend>
+			<mi-time-field mi-field-units="minutes" mi-field-to-units="hours" mi-field-property="Resources.User.Properties.SessionTimeOut" ng-model="user.SessionTimeOut" ng-required="true" ng-maxlength="6"></mi-time-field>
+			<mi-select-field mi-field-property="Resources.User.Properties.userConflict" ng-model="user.LoginConflict" ng-disabled="formDisabled()"></mi-select-field>
+		</fieldset>
+		<!--
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-md-6">
+				<mi-button class="btn btn-cancel force-logoff" ng-show="controls.logoff.show()" mi-button-click="controls.logoff.click()" mi-button-text="Force logoff" mi-button-loading-text="Logging off"></mi-button>
+			</div>
+		</div>
+-->
+	</div>
+</div>

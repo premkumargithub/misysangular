@@ -1,0 +1,58 @@
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<mi-text-field mi-field-property="Resources.Suppliers.Properties.ShortName" ng-model="supplier.ShortName"></mi-text-field>
+	</div>
+	<div class="col-md-4">
+		<mi-text-field mi-field-property="Resources.Suppliers.Properties.Reference" ng-model="supplier.Reference"></mi-text-field>
+	</div>
+	<div class="col-md-4">
+		<mi-select-field mi-field-property="Resources.Suppliers.Properties.Status" ng-model="supplier.Status"></mi-select-field>
+	</div>
+</div>
+<div class="row no-stretch">
+	<div class="col-md-5 col-md-offset-1">
+		<mi-text-field mi-field-property="Resources.Suppliers.Properties.Terms" ng-model="supplier.Terms"></mi-text-field>
+	</div>
+	<div class="col-md-5">
+		<mi-text-field mi-field-property="Resources.Suppliers.Properties.CurrencyID" ng-model="supplier.CurrencyID"></mi-text-field>
+	</div>
+</div>
+<div class="row no-stretch">
+	<div class="col-md-12">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.Address.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-6">
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address1" ng-model="supplier.Address1"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address2" ng-model="supplier.Address2"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address3" ng-model="supplier.Address3"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Address4" ng-model="supplier.Address4"></mi-text-field>
+				</div>
+				<div class="col-md-6">
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.City" ng-model="supplier.City"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.State" ng-model="supplier.State"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Zip" ng-model="supplier.Zip"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Country" ng-model="supplier.Country"></mi-text-field>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>
+<div class="row no-stretch">
+	<div class="col-md-12">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.ContactInformation.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-6">
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Contact" ng-model="supplier.Contact"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.ContactEmail" ng-model="supplier.ContactEmail"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Website" ng-model="supplier.Website"></mi-text-field>
+				</div>
+				<div class="col-md-6">
+					<mi-tel-field mi-field-property="Resources.Suppliers.Properties.Phone" ng-model="supplier.Phone"></mi-tel-field>
+					<mi-fax-field mi-field-property="Resources.Suppliers.Properties.Fax" ng-model="supplier.Fax"></mi-fax-field>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>

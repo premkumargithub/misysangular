@@ -1,0 +1,19 @@
+<div class="mi-field text" ng-class="{empty:isEmpty(), readonly: isReadonly()}">
+	<label>{{::displayText}}</label>
+	<div class="edit" ng-hide="isReadonly()">
+		<input type="text" class="form-control" name="{{name}}" ng-disabled="ngDisabled" ng-model="ngModel" ng-model-options="{
+				allowInvalid: true
+			}" ng-readonly="ngReadonly" ng-required="ngRequired" maxlength="{{ngMaxlength}}" ng-minlength="ngMinlength" placeholder="{{placeholder}}" validate-equal="validateEqual" ng-pattern="ngPattern"></input>
+		<mi-tooltip-revisit text="'Field requires input'" show="!validRequired()"></mi-tooltip-revisit>
+		<mi-tooltip-revisit text="'Field requires ' + ngMinlength + ' characters'" show="!validMinlength()"></mi-tooltip-revisit>
+		<mi-tooltip-revisit text="'Content does not match'" show="!validEqual()"></mi-tooltip-revisit>
+	</div>
+	<div class="readonly" ng-show="isReadonly()">
+		<div class="not-empty" ng-hide="isEmpty()">
+			<p>{{ngModel}}</p>
+		</div>
+		<div class="empty" ng-show="isEmpty()">
+			<p class="gray">No data</p>
+		</div>
+	</div>
+</div>

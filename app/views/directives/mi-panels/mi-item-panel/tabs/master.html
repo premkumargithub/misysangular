@@ -1,0 +1,44 @@
+<div class="row no-stretch">
+	<div class="col-md-5">
+		
+		<mi-select-field mi-field-property="Resources.Item.Properties.Status" ng-model="item.Status"></mi-select-field>
+		<mi-textarea-field mi-field-property="Resources.Item.Properties.ExtendedDescription" ng-model="item.ExtendedDescription"></mi-textarea-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.Reference" ng-model="item.Reference"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Item.Properties.SalesID" ng-model="item.SalesID"></mi-text-field>
+		<mi-select-field mi-field-property="Resources.Item.Properties.Type" ng-model="item.Type"></mi-select-field>
+		
+		<label for="unitWeight">{{::resourcesObj.Resources.Item.Properties.Weight.DisplayText}}</label>
+		<div class="input-group">
+			<input id="unitWeight" type="text" class="form-control" ng-model="item.Weight" />
+			<span class="input-group-addon">kgs</span>
+		</div>
+		
+		<label for="unitCost">{{::resourcesObj.Resources.Item.Properties.Cost.DisplayText}}</label>
+		<div class="input-group">
+			<span class="input-group-addon">USD$</span>
+			<input id="unitCost" type="text" class="form-control" ng-model="item.Cost" />
+		</div>
+		
+		<mi-text-field mi-field-property="Resources.Item.Properties.Cycle" ng-model="item.Cycle"></mi-text-field>
+	</div>
+	<div class="col-md-7">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Items.Tabs.Master.Legends.GeneralLedgerInterface.DisplayText}}</legend>
+			<mi-text-field mi-field-property="Resources.Item.Properties.AccountSetID" ng-model="item.AccountSetID"></mi-text-field>
+		</fieldset>
+		
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Items.Tabs.Master.Legends.DefaultUnitsOfMeasure.DisplayText}}</legend>
+			
+			<label for="stockUnit">{{::resourcesObj.Resources.Item.Properties.StockingUnitOfMeasure.DisplayText}}</label>
+			<div class="input-group">
+				<span class="input-group-addon">1.000000</span>
+				<input id="stockUnit" type="text" class="form-control" ng-model="item.StockingUnitOfMeasure" />
+			</div>
+			
+			<span style="display:inline-block; padding-top:1.25em; text-align:center; width:100%;">{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Items.Tabs.Master.Strings.ForEach.DisplayText}}</span>
+			
+			<mi-text-field mi-field-property="Resources.Item.Properties.PurchasingUnitOfMeasure" ng-model="item.PurchasingUnitOfMeasure"></mi-text-field>
+		</fieldset>
+	</div>
+</div>

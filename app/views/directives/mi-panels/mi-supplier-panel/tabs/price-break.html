@@ -1,0 +1,27 @@
+<!--
+<div class="row no-stretch">
+	<div class="col-md-12">
+		<fieldset>
+			<legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.PriceBreaksforSelectedSupplier.DisplayText}}</legend>
+			<div class="row">
+				<div class="col-md-6">
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.MinimumQuantityPOUnits" ng-model="supplier.MinimumQuantityPOUnits"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.POUnits" ng-model="supplier.POUnits"></mi-text-field>
+					<mi-select-field mi-field-property="Resources.Suppliers.Properties.Type" ng-model="supplier.Type"></mi-select-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.PricePOUnits" ng-model="supplier.PricePOUnits"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.Discount" ng-model="supplier.Discount"></mi-text-field>
+				</div>
+				<div class="col-md-6">
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.MinimumQuantity" ng-model="supplier.MinimumQuantity"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.StockingUnits" ng-model="supplier.StockingUnits"></mi-text-field>
+					<mi-text-field mi-field-property="Resources.Suppliers.Properties.PriceStockingUnits" ng-model="supplier.PriceStockingUnits"></mi-text-field>
+					<mi-textarea-field mi-field-property="Resources.Suppliers.Properties.Comment" ng-model="supplier.Comment"></mi-textarea-field>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+</div>
+-->
+<mi-supplier-price-break-data-grid
+	supplier-resource-id="supplier.ResourceID"
+></mi-supplier-price-break-data-grid>

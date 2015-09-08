@@ -1,0 +1,13 @@
+node_modules
+dist
+.tmp
+.sass-cache
+coverage
+app/bower_components
+app/docs
+app/scripts/constants.js
+app/scripts/templates.js
+out/client-junit.xml
+npm-debug.log
+screenshots/*
+.idea/

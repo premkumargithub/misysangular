@@ -1,0 +1,28 @@
+<form class="register step-one" name="stepOne" novalidate>
+	<h1>Trial Registration - Step 1</h1>
+	<br />
+	<p class="note required-fields alert-warning">(All fields are required)</p>
+	
+	<mi-text-field ng-model="company.CompanyName" mi-field-property="Views.Login.Register.CompanyName" ng-minlength="4" ng-maxlength="40" ng-required="true"></mi-text-field>
+	
+	<mi-zip-field ng-model="company.ZipCode" the-country="company.Country" mi-field-property="Views.Login.Register.Zip" ng-minlength="5" ng-maxlength="10" ng-required="true"></mi-zip-field>
+	
+	<mi-country-list-field data-ng-model="company.Country" ng-required="true" mi-field-property="Views.Login.Register.Country"></mi-country-list-field>
+	
+	<mi-text-field ng-model="company.ContactName" mi-field-property="Views.Login.Register.ContactName" ng-maxlength="30" ng-required="true"></mi-text-field>
+	
+	<mi-text-field ng-model="company.JobTitle" mi-field-property="Views.Login.Register.JobTitle" ng-maxlength="20" ng-required="true"></mi-text-field>
+	
+	<mi-email-field ng-model="company.EmailAddress" mi-field-property="Views.Login.Register.Email" ng-maxlength="40" ng-required="true"></mi-email-field>
+	
+	<mi-text-field validate-equal="company.EmailAddress" ng-model="confirmEmailAddress" mi-field-property="Views.Login.Register.ConfirmEmail" ng-maxlength="40" ng-required="true"></mi-text-field>
+	
+	<mi-http-alert-revisit mi-http-alert-trigger="miHttpAlertTrigger" mi-http-alert-cancel="cancelAlert"></mi-http-alert-revisit>
+	
+	<mi-button
+		class="btn btn-success"
+		mi-button-click="submit()"
+		mi-button-text="Continue"
+		mi-button-loading-text="Continuing"
+	></mi-button>
+</form>

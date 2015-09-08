@@ -1,0 +1,14 @@
+<br /><br />
+<h1 style="text-align:center;">Thank you for registering!</h1>
+<br />
+<p style="text-align:center;">
+	Instructions for completing your registration have been sent to
+	<span ng-if="company.EmailAddress">{{company.EmailAddress}}.</span>
+	<span ng-if="!company.EmailAddress">the provided email address.</span>
+</p>
+<p style="text-align:center;">
+	If you don't find them, be sure to check your junk mail box.
+</p>
+<br />
+<a style="display:block; text-align:center;" ui-sref="base.login-template.register.email-confirmation">Continue to trial activation</a>
+<br /><br />

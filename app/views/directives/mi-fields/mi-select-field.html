@@ -1,0 +1,18 @@
+<div class="mi-field select">
+	<label ng-show="displayText">{{::getDisplayText(miFieldProperty)}}</label>
+	<div class="edit" ng-hide="isReadonly()">
+		<select class="form-control"
+			ng-model="ngModel"
+			ng-options="key as value for (key, value) in options"
+			ng-disabled="ngDisabled"
+		></select>
+	</div>
+	<div class="readonly" ng-show="isReadonly()">
+		<div class="not-empty" ng-hide="isEmpty()">
+			<p>{{getReadonlyValue()}}</p>
+		</div>
+		<div class="empty" ng-show="isEmpty()">
+			<p class="gray">No data</p>
+		</div>
+	</div>
+</div>

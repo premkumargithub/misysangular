@@ -1,0 +1,20 @@
+<div class="mi-field textarea">
+	<label>{{::getDisplayText(miFieldProperty)}}</label>
+	<div class="edit" ng-hide="isReadonly()">
+		<textarea
+			class="form-control"
+			ng-disabled="ngDisabled"
+			ng-model="ngModel"
+			ng-readonly="ngReadonly"
+			ng-required="ngRequired"
+		></textarea>
+	</div>
+	<div class="readonly" ng-show="isReadonly()">
+		<div class="not-empty" ng-hide="isEmpty()">
+			<p>{{ngModel}}</p>
+		</div>
+		<div class="empty" ng-show="isEmpty()">
+			<p class="gray">No data</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<form name="login" novalidate>
+	<h1>{{resourcesObj.Views.Login.Default.DisplayText}}</h1>
+	
+	<mi-text-field mi-field-property="Resources.Login.Properties.CompanyName" ng-model="user.CompanyName" ng-required="true" ng-minlength="8" ng-maxlength="8"></mi-text-field>
+	<mi-text-field mi-field-property="Resources.Login.Properties.Username" ng-model="user.UserName" ng-required="true" ng-minlength="4" ng-maxlength="20"></mi-text-field>
+	<mi-password-field mi-field-property="Resources.User.Properties.Password" ng-model="user.Password" ng-required="true" validate="false" ng-minlength="8" ng-maxlength="30"></mi-password-field>
+	<label class="save-option">
+		<input type="checkbox" name="rememberCompanyName" ng-model="rememberCompanyName" checked="checked"/>
+		{{resourcesObj.Views.Login.Default.SaveCompanyID.DisplayText}}
+	</label>
+	<a class="alternative forgot-password" ng-click="goToPasswordRecovery()" >{{resourcesObj.Views.Login.Default.ForgotPassword.DisplayText}}</a>
+	
+	<div class="ng-hide-fade security-question" ng-show="user.SecurityQuestion">
+		<mi-text-field mi-field-property="Resources.User.Properties.SecurityQuestion" ng-model="user.SecurityQuestion" mi-readonly="true"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.User.Properties.SecurityAnswer" ng-model="user.SecurityAnswer"></mi-text-field>
+	</div>
+	
+	<mi-http-alert-revisit mi-http-alert-trigger="miHttpAlertTrigger" mi-http-alert-cancel="cancelAlert"></mi-http-alert-revisit>
+	
+	<div class="flex-row submit">
+		<mi-button
+			class="btn btn-success"
+			mi-button-click="submit()"
+			mi-button-text="Log in"
+			mi-button-loading-text="Logging in"
+		></mi-button>
+		<a class="alternative register" ui-sref="base.login-template.register.step-one">Get Started For Free</a>
+	</div>
+</form>

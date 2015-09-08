@@ -1,0 +1,15 @@
+<form novalidate name="emailConfirmation">
+	<h1>Free Trial Activation</h1>
+
+	<mi-text-field class="no-form-control" mi-field-property="Resources.Registration.ActivationCode" ng-model="activationCode" ng-required="true"></mi-text-field>
+	
+	<mi-http-alert-revisit mi-http-alert-trigger="miHttpAlertTrigger"></mi-http-alert-revisit>
+	
+	<mi-button
+		class="btn btn-success"
+		mi-button-click="submit()"
+		mi-button-disabled="emailConfirmation.$invalid"
+		mi-button-text="Activate"
+		mi-button-loading-text="Activating"
+	></mi-button>
+</form>

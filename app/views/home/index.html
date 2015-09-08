@@ -1,0 +1,82 @@
+<div class="home">
+	<div ng-controller="SidebarCtrl" class="sidebar-wrap">	
+		<section class="sidebar secondary">
+		
+			<button ng-click="togglePin()" ng-class="{active:sidebarPinned}" class="pin btn btn-default" type="buttton"><span class="glyphicon glyphicon-pushpin"></span></button>
+			<div ng-controller="SubmenusCtrl">
+				<mi-list-panel mi-list-panel-list="submenus"></mi-list-panel>
+			</div>
+			
+		</section>
+	</div><section class="primary">
+		<header>
+			<a ui-sref="base.home.dashboard" class="misys-logo">
+				<img src="./images/mim-383x41.png" alt="MISys Inventory Manager Logo" title="MISys Inventory Manager" height="auto" width="auto"/>
+			</a>
+			
+			<div class="misc-tools-include" ng-include="'views/home/misc-tools.html'"></div>
+		</header>
+		
+		<ul class="nav nav-tabs">
+			<li><a ui-sref="base.home.dashboard" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Dashboard.DisplayText}}">{{::resourcesObj.Views.Home.Dashboard.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.master-files"  ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.MasterFiles.DisplayText}}">{{::resourcesObj.Views.Home.MasterFiles.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.planning" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Planning.DisplayText}}">{{::resourcesObj.Views.Home.Planning.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.sales" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Sales.DisplayText}}">{{::resourcesObj.Views.Home.Sales.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.purchasing" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Purchasing.DisplayText}}">{{::resourcesObj.Views.Home.Purchasing.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.production" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Production.DisplayText}}">{{::resourcesObj.Views.Home.Production.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.inventory-control" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.InventoryControl.DisplayText}}">{{::resourcesObj.Views.Home.InventoryControl.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.accounting" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Accounting.DisplayText}}">{{::resourcesObj.Views.Home.Accounting.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.reports" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Reports.DisplayText}}">{{::resourcesObj.Views.Home.Reports.DisplayText}}</a></li>
+			<li><a ui-sref="base.home.admin" ui-sref-active="active" mi-bound-title="{{::resourcesObj.Views.Home.Admin.DisplayText}}">{{::resourcesObj.Views.Home.Admin.DisplayText}}</a></li>
+		</ul>
+	
+		<section class="main-panel">
+			<header>
+				<a href="javascript:void(0);" ng-click="toggleSidebar()" class="btn btn-primary list-icon"><img src="/images/list-icon_25x14.png" height="14px" width="25px" title="Show and hide menu" /></a>
+				<ol class="breadcrumb">
+					<li ng-repeat="crumb in crumbs" ng-class="{'last':$last}">
+						<a ui-sref="{{crumb.state}}">{{crumb.title}}</a>
+					</li>
+				</ol>
+				<section class="search">
+					<div class="add-filter-wrap">
+						<a ng-if="!!addNewState" class="add-filter" ng-click="goToAddNewState()">+ {{::resourcesObj.Views.Home.MainContent.AddNew.DisplayText}}</a>
+					</div>
+					<div class="filter-wrap">
+						<div class="filter input-group">
+							<div class="input-group-btn">
+								<button class="btn btn-default adv-search" type="button"><span class="caret"></span></button>
+							</div>
+							<input class="form-control terms" type="text" />
+						</div>
+						<button class="btn btn-success find" type="button" title="Find">{{::resourcesObj.Views.Home.MainContent.FilterInput.FindButton.DisplayText}}</button>
+					</div>
+				</section>
+			</header>
+			
+			<section class="content">
+				<div ui-view="home-content"></div>
+			</section>
+			
+			<footer></footer>
+		</section>
+	</section>
+	<section class="external-actions clearfix" ng-controller="ExternalActionsCtrl">
+		<section class="external-actions-panel">
+			<mi-help-menu
+				mi-help-menu-toggle="toggleHelp"
+				mi-help-menu-toggle-videos="toggleHelpVideos"
+			></mi-help-menu>
+		</section>
+		<section class="levi-buttons">
+			<ul>
+				<li title="Add new" data-title-placement="left"><span>+</span></li>
+				<li title="Help" data-title-placement="left" ng-class="{active:helpActive}" ng-click="clickHelpIcon()"><span>?</span></li>
+				<li title="Print" data-title-placement="left"><span class="glyphicon glyphicon-list-alt"></span></li>
+				<li title="MISys University" data-title-placement="left" ng-class="{active:helpVideosActive}" ng-click="clickHelpVideosIcon()"><img class="grad-cap" src="/images/ee-misys-university-icon.png" />                  </li>
+			</ul>
+		</section>
+	</section>
+	
+	<div class="to-top-container" show-when-scrolling="150" scroll-to-element="body"><span class="glyphicon glyphicon-chevron-up"></span></div>
+</div>

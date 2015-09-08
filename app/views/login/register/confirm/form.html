@@ -1,0 +1,82 @@
+<form novalidate name="confirm">
+	<h1>Trial Registration - Summary</h1>
+	<br/>
+	<div class="note-confirm-page">
+		<p class="">Please check the accuracy of this information.</p>
+	</div>
+	<fieldset class="misys-fieldset"><!-- Company -->
+		<legend>Company</legend>
+		<div class="grid">
+	    	<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Company Name:</div>
+				<div class="grid-cell expand">{{company.CompanyName}}</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Address:</div>
+				<div class="grid-cell expand">
+					<span>{{company.Address1}}</span>
+					<span ng-if="company.Address2">{{company.Address2}}</span>
+					<span ng-if="company.Address3">{{company.Address3}}</span>
+					<span ng-if="company.Address4">{{company.Address4}}</span>
+				</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">City:</div>
+				<div class="grid-cell expand">{{company.City}}</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">State/Province:</div>
+				<div class="grid-cell expand">{{company.State}}</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Zip/Postal Code:</div>
+				<div class="grid-cell expand">{{company.ZipCode}}</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Country:</div>
+				<div class="grid-cell expand">{{company.Country}}</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset class="misys-fieldset"><!-- Contact -->
+		<legend>Contact</legend>
+		<div class="grid">
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Contact Name:</div>
+				<div class="grid-cell expand">{{company.ContactName}}</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Job Title:</div>
+				<div class="grid-cell expand">{{company.JobTitle}}</div>
+			</div>
+			<div class="grid-row">
+				<div class="grid-cell shrink grid-label">Email:</div>
+				<div class="grid-cell expand">{{company.EmailAddress}}</div>
+			</div>
+			<div class="grid-row">
+            <div class="grid-cell shrink grid-label">Telephone:</div>
+            <div ng-if="company.Country == 'United States' || company.Country == 'Canada'" class="grid-cell expand">{{company.Phone | tel }}</div>
+            <div ng-if="company.Country != 'United States' && company.Country != 'Canada'" class="grid-cell expand">{{company.Phone}}</div>
+			</div>
+		</div>
+	</fieldset>
+	
+	<br />
+	<div class="note-confirm-page">
+		<p class="">To make a correction, click the Previous link and update your registration.</p>
+		<p class="">When you click the SUBMIT button an email containing your login  credentials will be sent to {{::company.EmailAddress}}.</p>
+	</div>
+	
+	<mi-http-alert-revisit mi-http-alert-trigger="miHttpAlertTrigger"></mi-http-alert-revisit>
+	
+	<div class="flex-row submit">
+		<a class="alternative" ui-sref="base.login-template.register.step-two">Previous</a>
+		<mi-button
+			class="btn btn-success"
+			mi-button-click="register()"
+			mi-button-text="Submit"
+			mi-button-loading-text="Submitting"
+		></mi-button>
+	</div>
+</form>

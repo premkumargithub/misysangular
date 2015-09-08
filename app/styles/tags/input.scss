@@ -1,0 +1,50 @@
+$placeholder-color: #888;
+
+input {
+	&:not([type=submit]):not([type=checkbox]) {
+		line-height:1em;
+		padding:.25em .5em;
+	
+		&.ng-invalid {
+			background-color:$warning-red;
+		
+			&.ng-invalid-required {
+				background-color: $warning-yellow;
+			}
+		}
+	}
+
+	&[readonly=readonly] {
+		cursor: default;
+	}
+	&[type=password] {
+		&::-webkit-input-placeholder {
+			color: $placeholder-color;
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+			color: $placeholder-color;  
+		}
+
+		&:-ms-input-placeholder {  
+			color: $placeholder-color;
+		}
+	}
+	&[type=checkbox] {
+		cursor: pointer;
+
+		&[disabled] {
+			cursor: default;
+		}
+	}
+	&[type=submit] {
+		text-align:center;
+		
+		&[disabled=disabled] {
+			background-color:#aaa;
+		}
+		&.ng-invalid {
+			background-color:#888;
+		}
+	}
+}

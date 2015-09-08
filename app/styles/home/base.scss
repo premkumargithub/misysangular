@@ -1,0 +1,528 @@
+div.home {
+	height:100%;
+	position: relative;
+	white-space:nowrap;
+	width:100%;
+
+	* {
+		white-space: normal;
+	}
+	
+  /* Used in calculations for the sliding sidebar and contracting content */
+	$main-min-width: 980px;
+  $main-width: 97%;
+	$main-margin-right: 3%;
+
+	/* These vars become tricky during transitions.
+		 The transition width is adjusted at runtime. */
+	$sidebar-min-width: 180px;
+	$sidebar-width: 17.5%;
+	
+	.no-stretch {
+		max-width: $main-min-width;
+	}
+	
+	& > div.sidebar-wrap {
+		display:inline-block;
+		min-width:$sidebar-min-width;
+		padding-top:1px;
+		transition: margin-left 750ms ease-in-out;
+		vertical-align:top; 
+		width:$sidebar-width;
+		
+		&.hidden-by-slide {
+			margin-left: (-1*$sidebar-width);
+		}
+		
+		& > section.sidebar {
+			border-top:1px solid #ccc;
+			box-shadow:inset 0 15px 15px -15px #bbb;
+			margin-right:0px;
+			margin-top:calc(8.5em - 1px);	/*This is off by a pixel, depending on your browser*/
+			text-align:right;
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+            width: 90%;
+            float: right;
+			
+			& > button.pin {
+				font-size:.85em;
+				margin-top:.5em;
+				margin-top:.5em;
+				margin-right:.5em;
+				padding:3px 6px;
+			}
+			
+			.panel-drop-down {
+				background-color:transparent;
+				border-width:0px;
+				
+				.panel-heading {
+					background-color:transparent;
+					border-radius:0px;
+					border-width:0px;
+					font-size:.9em;
+					padding-bottom:.35em;
+					padding-top:.35em;
+					padding-left:20px;
+					text-transform:uppercase;
+					
+					.panel-title {
+						margin-bottom:0px;
+					}
+				}
+			
+				ul.list-group {
+					border:1px solid #bbb;
+					border-top-right-radius:1em;
+					border-bottom-right-radius:1em;
+                    border-top-left-radius:1em;
+					border-bottom-left-radius:1em;
+					margin:0 0.5%;
+					margin-bottom:1em;
+					overflow:hidden;
+					width:99%;
+					
+					li.list-group-item {
+						font-size:.9em;
+						font-weight:bold;
+						padding:.35em 17.5%;
+						padding-right:0;
+						
+						div.item-name {
+							float:left;
+							width:70%;
+							
+							p {
+								margin:0px;
+							}
+						}
+						div.selected {
+							float:right;
+							visibility:hidden;
+							width:12.5%;
+							
+							span.glyphicon-chevron-right {
+								font-size:.75em;
+								text-align:right;
+							}
+						}
+						
+						&.active {
+							div.selected {
+								visibility:visible;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+  
+  & > section.primary {
+    background-color:#fff;
+    border-bottom-right-radius:15px;
+		display:inline-block;
+		margin-right:2.5%;
+		max-height:100%;
+    max-width:$main-width;
+		min-width:$main-min-width;
+    overflow:visible;
+		position:relative;
+		transition: width 750ms ease-in-out;
+		vertical-align: top;
+    width:$main-width;
+		
+		&.contracted {
+			width: ($main-width - $sidebar-width);
+		}
+		
+		& > header {
+			align-items: center;
+			display: flex;
+			height: 6.25em;
+			justify-content: space-between;
+			
+			a.misys-logo {
+				margin-left:1.25em;
+
+				img {
+					height:3.5em;
+					max-height:47px;
+					width:auto;
+				}
+			}
+				
+			& > div.misc-tools-include {
+				align-self: flex-start;
+			}
+		}
+    
+    & > ul.nav-tabs {
+			border-width:0px;
+			height:2.25em;
+			margin-bottom:1px;
+			padding-left:1.25em;
+            min-width: 1020px;
+            
+		
+      li {
+				background-color:#F4F4F4;
+				border:1px solid #ccc;
+				border-left-width:1px;
+				border-bottom-width:0px;
+				box-shadow: -3px 4px 11px 0px rgba(0, 0, 0, 0.2);
+				height:100%;
+				margin-right:.5em;
+        
+        &:first-child {
+					border-left-width:1px;
+        }
+        
+        a {
+					border-radius:0px;
+					border-width:0px;
+          color:#808080;
+          font-size:.95em;
+          font-weight:bold;
+					height:100%;
+					line-height:1.2em;
+          margin:0;
+          padding:.5em .75em;
+					
+					&:hover, &.active {
+						background-color:$misys-blue;
+						color:#f8f8f8;
+					}
+        }
+      }
+    }
+		
+		& > section.main-panel {
+			border-bottom-right-radius:15px;
+			border-top-right-radius:15px;
+			border-width:0px;
+			border-left:1px solid #bbb;
+			box-shadow: 15px 0px 15px -15px #aaa;
+			margin-bottom:2em;
+			margin-top:-1px;
+			overflow:hidden;
+			position: absolute;
+			width: 100%;
+			
+			fieldset {
+				border:1px solid #c8c8c8;
+				border-radius:12.5px;
+				margin-top:2em;
+				padding: 1.5em 5%;
+				padding-top: 1em;
+			
+				legend {
+					background-color:$off-white;
+					border-width:0px;
+					color:#738FA8;
+					float:left;
+					font-size:1.1em;
+					font-weight:bold;
+					margin-bottom:0;
+					margin-left:-5px;
+					margin-top:-1.6em;
+					padding:0 2px;
+					width:auto;
+					
+					label {
+						font-size:1em;
+						margin-top:0;
+					}
+					
+					& + label {
+						margin-top:0px;
+					}
+					
+					& + * {
+						clear:both;
+					}
+				}
+			}
+		
+			& > header {
+				background-color:$misys-blue;
+				padding:1.25em 2%;
+				width:100%;
+				
+				a.list-icon {
+					background-color: $misys-blue;
+					border-width:0px;
+					font-size:1.75em;
+					padding-bottom: .4em;
+					padding-left: .4em;
+					padding-right: .4em;
+					padding-top: .25em;
+					
+					&:not(:hover) {
+						background-image:none;
+					}
+					
+					span.glyphicon {
+						color:#4A70B0;
+						font-size:1em;
+						vertical-align:middle;
+					}
+				}
+				
+				ol.breadcrumb {
+					background-color:inherit;
+					display:inline-block;
+					color:#f8f8f8;
+					font-size:.9em;
+					margin-bottom:0;
+					padding:.5em 1em;
+					padding-left:.25em;
+					vertical-align:middle;
+					
+					li + li:before {
+						color:#F8F8F8;
+						content:"> ";
+						padding:0;
+						padding-left:.3em;
+					}
+					
+					a {
+						color:#f8f8f8;
+						
+						&:hover {
+							color:#e0e0e0;
+							text-decoration:none;
+						}
+					}
+				}
+				
+				section.search {
+					display:block;
+					float:right;
+					margin-top:.25em;
+				
+					div.add-filter-wrap {
+						clear:none;
+						float:left;
+					}
+					
+					a.add-filter {
+						color:#fff;
+						display:inline-block;
+						font-size:1em;
+						font-weight:bold;
+						margin-right:1.5em;
+						margin-top:.5em;
+						text-transform:uppercase;
+						
+						&:hover {
+							color:#e0e0e0;
+							text-decoration:none;
+						}
+					}
+					
+					div.filter-wrap {
+						clear:none;
+						display:inline-block;
+						float:right;
+					
+						div.filter {
+							background-color:#f0f0f0;
+							border-radius:.5em;
+							border-bottom-right-radius:0px;
+							border-top-right-radius:0px;
+							float:left;
+							max-width:18em;
+							padding:5px 0;
+							padding-left:2.5px;
+							padding-right:0px;
+							
+							button.adv-search {
+								background-color:#f0f0f0;
+								border-width:0px;
+								border-right-width:1px;
+								height:1.75em;
+								width:2em;
+								
+								span.caret {
+									border-top-color: $misys-blue;
+									border-bottom-color: $misys-blue;
+									color:$misys-blue;
+									height:.6em;
+								}
+							}
+							
+							input.terms {
+								border-bottom-right-radius:0px;
+								border-top-right-radius:0px;
+								height:1.75em;
+								width:15em;
+							}
+						}
+					
+						button.find {
+							border-color:#f0f0f0;
+							border-bottom-left-radius:0px;
+							border-top-left-radius:0px;
+							display:inline;
+							float:right;
+							font-weight:bold;
+							line-height:1.3em;
+							padding:.5em .75em;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+			& > section.content {
+				overflow:hidden;
+				position:relative;
+			
+				.data-grid-container {
+					margin:6px 0;
+					overflow:hidden;
+					padding:0px 6px;
+					width:100%;
+				}
+			}
+			& > footer {
+				background-color:$misys-blue;
+				padding:.5em 0em;
+			}
+		}
+  }
+	
+	.to-top-container {
+		align-items: center;
+		background-color:#333;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		bottom:0;
+		color:#747474;
+		cursor:pointer;
+		display: flex;
+		height:35px;
+		justify-content: center;
+		opacity:.9;
+		position:fixed;
+		right:20px;
+		transition: background-color 350ms linear;
+		width:48px;
+		z-index:1950;
+		
+		span {
+			color:#fff;
+		}
+		
+		&:hover {
+			background-color:#418acb;
+		}
+	}
+}
+.external-actions {
+	display:block;
+	height:100%;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:2000;
+	
+	& > section.levi-buttons {
+		float:right;
+		height:100%;
+		position:relative;
+		width: 1.85em;
+		
+		& > ul {
+			background-color:$misys-blue;
+			border-top-left-radius: .3em;
+			border-bottom-left-radius: .3em;
+			display:block;
+			font-size:1.15em;
+			list-style-type: none;
+			margin-bottom:0;
+			margin-left:0;
+			margin-right:-1px;
+			margin-top:-200%;
+			padding:.35em 0em;
+			position:absolute;
+			text-align:center;
+			top:50%;
+			width: 100%;
+			
+			li {
+				background-image: linear-gradient(to right bottom, lighten($misys-blue, 7.5%) 0%, $misys-blue 45%, darken($misys-blue, 7.5%) 100%);
+				border-radius: 1.25em;
+				cursor:pointer;
+				display: inline-block;
+				height: 1.35em;
+				margin: .15em 0;
+				text-align:center;
+				width: 1.25em;
+				
+				&.active {
+					background-image: linear-gradient(to right bottom, #467599 0%, $misys-blue 45%, #71AFD1 100%);
+				}
+				
+				a {
+					display:block;
+					height:100%;
+					width:100%;
+				}
+				
+				img.grad-cap {
+					margin-top:-3px;
+				}
+				
+				span {
+					color: white;
+					
+					&.glyphicon {
+						font-size: .75em;
+					}
+				}
+			}
+		}
+	}
+	
+	& > section.external-actions-panel {
+		float:right;
+		height:100%;
+		width:auto;
+	}
+}
+
+div.test-notification-container {
+    border-right:2px solid transparentize(darken($warning-yellow-2, 5%), .2);
+    border-top:2px solid transparentize(darken($warning-yellow-2, 5%), .2);
+    height:125px;
+    overflow: hidden;
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:125px;
+
+    div.test-notification {
+        background: $warning-yellow-2;
+        border-bottom:2px solid transparentize(darken($warning-yellow-2, 5%), .2);
+        height:282px;
+        position:absolute;
+        right: calc(-142.5% - 3px);
+        top: calc(-142.5% - 4px);
+        transform: rotate(45deg);
+        width:282px;
+
+        span.message {
+            display:block;
+            font-size: 1.15em;
+            font-weight: bold;
+            margin-top: calc(93% - 1em);
+            text-align: center;
+        }
+    }
+}
+
+h1.main-heading {
+    height: 125px;
+}

@@ -1,0 +1,236 @@
+div.container[ui-view="base-content"] .login-container {
+	padding:2.5em 0;
+	width:100%;
+    margin-top: 100px;
+	.login {
+		margin:0 auto;
+		width:400px;
+
+		header {
+			a {
+				display:block;
+				text-align:center;
+			}
+		}
+		
+		section {
+			margin-top:2.75em;
+			
+			h1 {
+				color:#738FA8;
+				font-size:1.15em;
+				font-weight:bold;
+				margin-bottom:.1em;
+				margin-top:0;
+			}
+			
+			form {
+				&.ng-submitted {
+					div.mi-field {
+						input ~ .tooltip {
+							display: block !important;
+						}
+					}
+				}
+				
+				div.mi-field {
+					input ~ .tooltip {
+						display: none !important;
+					}
+				}
+				
+				.alert {
+					background-color: inherit;
+					border: 0px none;
+					font-size:.9em;
+					margin:0;
+					padding: 0;
+					width:100%;
+					
+					&.alert-warning {
+						background-color: #fcf8e3;
+						  padding: .5em;
+					}
+					
+					button.close {
+						display: none;
+					}
+				}
+				
+				div.mi-field {
+					font-size:.95em;
+					
+					label {
+						color:#738FA8;
+						display:inline;
+						font-weight:bold;
+						
+						&:after {
+							content: ' ' attr(data-after) '\A';
+							white-space:pre;
+						}
+					}
+					
+					input:not([type=submit]):not([type=checkbox]) {
+						border:1px solid #BCCCD9;
+						border-radius:5px;
+						padding:5px;
+						width:100%;
+						
+						&.ng-invalid {
+							background-color:#fff !important;
+						}
+					}
+					
+					p {
+						margin-bottom:0;
+					}
+				}
+				
+				input[type=submit], button {
+					background-color:#85B769;
+					border:1px solid #BCCCD9;
+					border-radius:5px;
+					color:white;
+					margin-bottom: 1em !important;
+					margin-top: 1.625em;
+					min-width:5em;
+					padding:5px;
+					text-transform:uppercase;
+					
+					&[disabled=disabled] {
+						background-color:#99c283 !important;
+					}
+				}
+				
+				.note {
+					font-size:.9em;
+				}
+				
+				.alert {
+					margin-top:1.375em;
+				}
+				
+				.security-question + .alert {
+					margin-top:0em;
+				}
+				
+				.alert + button, .alert + input[type=submit] {
+					margin-top:1.375em;
+				}
+				
+				a.alternative {
+					color:#A7A7A7;
+					font-size:.85em;
+					margin-right:1.75em;
+				}
+				
+				input[type=submit], button {
+					width:8em;
+					
+					& + a.alternative {
+						margin-left:1.75em;
+					}
+				}
+				
+				label.save-option {
+					color:#A7A7A7;
+					font-size:.85em;
+					font-weight: 400 !important;
+					margin-top:.65em;
+					padding-bottom:0;
+					vertical-align:text-bottom;
+					width:auto;
+
+					input[type=checkbox] {
+						display:inline-block;
+						vertical-align:text-bottom;
+					}
+				}
+
+				.forgot-password {
+					color:#A7A7A7;
+					float:right;
+					font-size:.85em;
+					margin-top:.65em;
+				}
+
+				.security-question {
+					display:block !important;
+					margin-top:1.375em;
+					opacity:1;
+					overflow:hidden;
+					transition: opacity 750ms ease-in-out;
+					width:100%;
+					
+					&.ng-hide {
+						display:block !important;
+						max-height:0em;
+						opacity:0;
+						padding-bottom:0;
+					}
+					
+					div.mi-field:last-child {
+						padding-bottom:0;
+					}
+				}
+				
+				.security-question:not(.ng-hide) + .alert {
+					margin-top:1.375em;
+				}
+				
+				/* Had a bit of trouble with aligning the anchor tag vertically beside the button in IE */
+				div.flex-row.submit {
+					align-items:center;
+					display:flex;
+					margin:0;
+					margin-bottom: 1em;
+					margin-top: 1.625em;
+					
+					input[type=submit], button {
+						margin:0 !important;
+					}
+				}
+			}
+			
+			aside.additional-info {
+				display:none;
+			}
+		}
+		
+		footer {
+			text-align:center;
+			margin-top:2.75em;
+			
+			a {
+				border-left:1px solid #b8b8b8;
+				color:#b8b8b8;
+				font-size:.8em;
+				padding:0 .5em;
+				
+				&:first-child {
+					border-left:0px;
+				}
+				&:hover, &:active {
+					color:#c8c8c8;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	
+	& > .external-actions {
+		display:block;
+		height:100%;
+		position:fixed;
+		right:0;
+		top:0;
+		z-index:2;
+		
+		& > section.external-actions-panel {
+			float:right;
+			height:100%;
+			width:auto;
+		}
+	}
+}

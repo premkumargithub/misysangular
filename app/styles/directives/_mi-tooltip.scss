@@ -1,0 +1,25 @@
+.mi-tooltip {
+	width:100%;
+}
+
+.tooltip {
+	cursor:default;
+	text-transform:none;
+
+	&.top > .tooltip-arrow {
+		border-top-color:$misys-blue !important;
+	}
+	&.left > .tooltip-arrow {
+		border-left-color:$misys-blue !important;
+	}
+	&.right > .tooltip-arrow {
+		border-right-color:$misys-blue !important;
+	}
+	&.bottom > .tooltip-arrow {
+		border-bottom-color:$misys-blue !important;
+	}
+	.tooltip-inner {
+		background-color:$misys-blue;
+		max-width:100%;
+	}
+}

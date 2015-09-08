@@ -1,0 +1,67 @@
+.modal-finder {
+	.modal-dialog {
+		width:725px !important;
+	}
+}
+
+.modal {
+	overflow-y:auto;
+    z-index:2010;
+
+	.modal-dialog{
+		width:500px;
+		
+		.modal-content {
+			overflow:hidden;
+			
+			.modal-header {
+				background-color: $misys-blue;
+				color: #fff;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			.modal-footer {
+				.btn {
+					padding:.5em;
+					font-weight:normal !important;
+					min-width:4.5em;
+				}
+			}
+		}
+	}
+	
+	&.loading-screen {
+		text-align:center;
+		
+		.modal-dialog {
+			height:100%;
+			padding:0;
+			position:relative;
+			width:100%;
+			
+			.modal-content {
+				$imgHeight: 125px;
+				$imgWidth: $imgHeight;
+				$contentPadding: 25px;
+			
+				border-width:0px;
+				left:50%;
+				margin-top:(-1 * (($imgHeight+$contentPadding)/2));
+				margin-left:(-1 * (($imgWidth+$contentPadding)/2));
+				padding:$contentPadding;
+				position:absolute;
+				top:50%;
+				
+				.modal-header, .modal-body, .modal-footer {
+					display:none;
+				}
+				
+				div.loading-image {
+					background-image: url('/images/loading.gif');
+					height:$imgHeight;
+					width:$imgWidth;
+				}
+			}
+		}
+	}
+}

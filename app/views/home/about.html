@@ -1,0 +1,14 @@
+<div class="asynchronous loading" ng-class="{loading:loading}" style="margin:1em 17.5%; min-height: 17.5em; width:65%">
+	<br />
+	<p><strong>(UI) Last Modified Date: </strong>{{lastModifiedDate}}</p>
+	<br />
+	<table>
+		<th><strong>Setting</strong></th>
+		<th><strong>Value</strong></th>
+		<tr ng-repeat="(property, value) in apiInfo">
+			<td style="padding:.75em 1.25em;"><strong>{{property}}</strong></td>
+			<td style="padding:.75em 1.25em;">{{value}}</td>
+		</tr>
+	</table>
+	<br />
+</div>

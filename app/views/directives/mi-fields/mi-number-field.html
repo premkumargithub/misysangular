@@ -1,0 +1,12 @@
+<div class="mi-field-finder">
+	<label>{{::displayText}}</label>
+	<div class="input-group">
+		<span class="input-group-addon" ng-if="showCurrency()">USD$</span>
+		<input class="form-control"
+			ng-model="ngModel"
+			type="text"
+			ng-disabled="ngDisabled"
+			mi-maxlength="ngMaxlength"
+		></input>
+	</div>
+</div>

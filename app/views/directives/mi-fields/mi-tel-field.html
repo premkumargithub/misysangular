@@ -1,0 +1,27 @@
+<div class="mi-field tel">
+	<label>{{::displayText}}</label>
+	<div class="edit" ng-hide="isReadonly()">
+		<input 
+			class="form-control" 
+			type="tel" 
+			ng-model="ngModel" 
+			ng-readonly="ngReadonly" 
+			ng-disabled="ngDisabled"
+			ng-required="ngRequired"
+			ng-model-options="{
+				allowInvalid: true
+			}"
+			ui-us-phone-number
+		></input>
+		<mi-tooltip-revisit text="'Field requires input'" show="!validRequired()"></mi-tooltip-revisit>
+		<mi-tooltip-revisit text="'Telephone number provided is invalid'" show="!validNumber()"></mi-tooltip-revisit>
+	</div>
+	<div class="readonly" ng-show="isReadonly()">
+		<div class="not-empty" ng-hide="isEmpty()">
+			<p>{{ngModel}}</p>
+		</div>
+		<div class="empty" ng-show="isEmpty()">
+			<p class="gray">No data</p>
+		</div>
+	</div>
+</div>

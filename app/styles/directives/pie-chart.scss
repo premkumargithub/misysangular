@@ -1,0 +1,9 @@
+.pie-chart {
+	path { 
+		stroke: #fff;
+		
+		&:hover {
+			opacity:0.9;
+		}
+	}
+}

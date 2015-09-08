@@ -1,0 +1,16 @@
+div.alert {
+	margin:0 1.25%;
+	opacity:1;
+	padding-bottom:.5em;
+	padding-top:.5em;
+	width:97.5%;
+	
+	&.mi-fade {
+		display:block !important;
+		opacity: 0;
+	}
+	
+	&.alert-success {
+		background-color:#DDEFD3;
+	}
+}

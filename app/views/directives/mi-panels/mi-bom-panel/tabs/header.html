@@ -1,0 +1,16 @@
+<div class="row no-stretch">
+	<div class="col-md-6">
+		<mi-select-field mi-field-property="Resources.Bom.Properties.AutoBuildOption" ng-model="bom.AutoBuildOption"></mi-select-field>
+		<mi-text-field mi-field-property="Resources.Bom.Properties.BuildQuantity" ng-model="bom.BuildQuantity"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Bom.Properties.AssemblyLead" ng-model="bom.AssemblyLead"></mi-text-field>
+		<mi-text-field mi-field-property="Resources.Bom.Properties.UnitsPerLead" ng-model="bom.UnitsPerLead"></mi-text-field>
+		<mi-checkbox-field mi-field-property="Resources.Bom.Properties.CostRollupEnabled" ng-model="bom.CostRollupEnabled"></mi-checkbox-field>
+	</div>
+	<div class="col-md-6">
+		<fieldset>
+			<legend>Cost Breakdown</legend>
+			
+			<mi-text-field mi-field-property="Resources.Bom.Properties.BurdenRate" ng-model="bom.BurdenRate"></mi-text-field>
+		</fieldset>
+	</div>
+</div>

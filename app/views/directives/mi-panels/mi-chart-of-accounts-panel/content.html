@@ -1,0 +1,57 @@
+<div class="row no-stretch">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Asset Accounts</legend>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.RawMaterial"
+                                   ng-model="account.AccountSetAssetRawMaterials" ng-maxlength="12" ></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.WIP"
+                                   ng-model="account.AccountSetAssetWorkInProcess" ng-maxlength="12"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.FinishedGoods"
+                                   ng-model="account.AccountSetAssetFinieshedGoods" ng-maxlength="12"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.AssetSalvage"
+                                   ng-model="account.AccountSetAssetSalvage" ng-maxlength="12"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.AccountReceivable"
+                                   ng-model="account.AccountSetAssetAccountsReceivable" ng-maxlength="12"></mi-text-field>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Income Accounts</legend>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.RevenueSales"
+                                   ng-model="account.AccountSetMaterialSales" ng-maxlength="12"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.RevenueSalvage"
+                                   ng-model="account.AccountSetMaterialSalvage" ng-maxlength="12"></mi-text-field>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Liablity Accounts</legend>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.LiabilityAccountPayable"
+                                   ng-model="account.AccountSetLiabilityAccountsPayable" ng-maxlength="12"></mi-text-field>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Expense Accounts</legend>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.CDCG"
+                                   ng-model="account.AccountSetExpenseCOGS" ng-maxlength="20"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.Scrap"
+                                   ng-model="account.AccountSetExpenseScrap" ng-maxlength="30"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Accounting.Properties.Shrink"
+                                   ng-model="account.AccountSetInventoryAdjustment" ng-maxlength="30"></mi-text-field>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>

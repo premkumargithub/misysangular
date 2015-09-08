@@ -1,0 +1,28 @@
+<div class="mi-mask-editor">
+	<div class="row" style="display:flex; align-items:flex-end;">
+		<div class="col-md-6">
+			<mi-text-field mi-field-property="Resources.User.Properties.ResetPasswordOption" ng-model="mask"></mi-text-field>
+		</div>
+		<div class="col-md-2">
+			<label>
+				Literal Mode
+				<input type="radio" ng-model="mode" value="{{literalMode}}" />
+			</label>
+		</div>
+		<div class="col-md-2">
+			<label>
+				Mask Mode
+				<input type="radio" ng-model="mode" value="{{maskMode}}" />
+			</label>
+		</div>
+		<div class="col-md-2">
+			<button class="btn btn-success full-width" ng-click="toggleTestArea()">Test</button>
+		</div>
+	</div>
+	<div class="row" ng-show="testAreaShown">
+		<section class="col-md-5 test-area">
+			<label>Test Input</label>
+			<input class="form-control" type="text" ui-mask="{{mask}}" ng-model="testModel" />
+		</section>
+	</div>
+</div>

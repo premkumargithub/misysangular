@@ -1,0 +1,41 @@
+<form class="register step-one" name="stepTwo" novalidate>
+	<h1>Trial Registration - Step 2</h1>
+	<br />
+	<p class="note required-fields alert-warning">(All fields are required)</p>
+	
+	<mi-text-field ng-model="company.CompanyName" mi-field-property="Views.Login.Register.CompanyName" ng-maxlength="40" ng-disabled="true"></mi-text-field>
+	
+	<mi-text-field class="address" ng-model="company.Address1" mi-field-property="Views.Login.Register.Address" ng-maxlength="30" ng-required="true"></mi-text-field>
+	
+	<mi-text-field class="address no-label" ng-model="company.Address2" ng-maxlength="30" optional-placeholder="true"></mi-text-field>
+	<mi-text-field class="address no-label" ng-model="company.Address3" ng-maxlength="30" optional-placeholder="true"></mi-text-field>
+	<mi-text-field class="address no-label" ng-model="company.Address4" ng-maxlength="30" optional-placeholder="true"></mi-text-field>
+	<mi-text-field ng-model="company.City" mi-field-property="Views.Login.Register.City" ng-required="true" ng-maxlength="30"></mi-text-field>
+	<mi-text-field ng-model="company.State" mi-field-property="Views.Login.Register.State" ng-required="true" ng-maxlength="20"></mi-text-field>
+	<div ng-if="company.Country === 'United States'">
+		<div class="row phone">
+			<div class="col-md-8">
+				<mi-tel-field ng-model="phone.base" mi-field-property="Views.Login.Register.WorkPhone" ng-maxlength="20" ng-required="true"></mi-tel-field> 
+			</div>
+
+			<div class="col-md-4">
+                <mi-text-field ng-model="phone.extension" mi-field-property="Views.Login.Register.Extension" ng-maxlength="6"></mi-text-field>
+			</div>
+		</div>
+	</div>
+	<div ng-if="company.Country !== 'United States'">
+		<mi-text-field ng-model="company.Phone" mi-field-property="Views.Login.Register.WorkPhone" ng-maxlength="20" ng-required="true" ></mi-text-field>  
+	</div>
+	
+	<mi-http-alert-revisit mi-http-alert-trigger="miHttpAlertTrigger" mi-http-alert-cancel="cancelAlert"></mi-http-alert-revisit>
+	
+	<div class="flex-row submit">
+		<a class="alternative" ui-sref="base.login-template.register.step-one">Previous</a>
+		<mi-button
+			class="btn btn-success"
+			mi-button-click="submit()"
+			mi-button-text="Continue"
+			mi-button-loading-text="Continuing"
+		></mi-button>
+	</div>
+</form>

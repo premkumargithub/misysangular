@@ -1,0 +1,24 @@
+<div class="row no-stretch">
+    <div class="col-md-12">
+        <fieldset>
+            <legend>{{::resourcesObj.Views.Home.MasterFiles.Submenus.MasterFiles.Suppliers.Tabs.Address.Legends.Statistics.DisplayText}}</legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.LastPONum" ng-model="supplier.LastPONum"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.LastPODate" ng-model="supplier.LastPODate"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.YtdPurchaseAmt" ng-model="supplier.YtdPurchaseAmt"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.OverdueDays" ng-model="supplier.OverdueDays"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.TotalOrders" ng-model="supplier.TotalOrders"></mi-text-field>
+
+                </div>
+                <div class="col-md-6">
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.TotalDays" ng-model="supplier.TotalDays"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.AvgLead" ng-model="supplier.AvgLead"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.OverdueOrders" ng-model="supplier.OverdueOrders"></mi-text-field>
+                    <mi-text-field mi-field-property="Resources.Suppliers.Properties.AvgOverdueLead" ng-model="supplier.AvgOverdueLead"></mi-text-field>
+
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

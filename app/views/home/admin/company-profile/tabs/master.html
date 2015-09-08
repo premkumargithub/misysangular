@@ -1,0 +1,190 @@
+<div class="row" ng-controller="CompanyMasterCtrl">
+    <div class="col-md-12">
+        <div ng-show="r.show" class="alert alert-{{r.status}}" role="alert">
+            <button type="button" class="close" ng-click="r.show = false"><span aria-hidden="true">&times;</span></button>
+            {{r.message}}
+        </div>
+    </div>
+	<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-12">
+				<fieldset>
+					<!-- Company -->
+					<legend>Company</legend>
+					<div class="primary-fields">
+						<mi-text-field class="address" ng-model="companyMaster.CompanyAddress" mi-field-property="Resources.Company.CompanyProfile.Properties.Address1" ng-maxlength="30" ng-required="true">
+						</mi-text-field>
+
+						<mi-text-field class="address no-label" ng-model="companyMaster.CompanyAddress1" ng-maxlength="30" optional-placeholder="true">
+						</mi-text-field>
+
+						<mi-text-field class="address no-label" ng-model="companyMaster.CompanyAddress2" ng-maxlength="30" optional-placeholder="true">
+						</mi-text-field>
+
+						<mi-text-field class="address no-label" ng-model="companyMaster.CompanyAddress3" ng-maxlength="30" optional-placeholder="true"></mi-text-field>
+
+						<mi-text-field ng-model="companyMaster.CompanyCity" mi-field-property="Resources.Company.CompanyProfile.Properties.City" ng-required="true" ng-maxlength="30">
+						</mi-text-field>
+
+						<mi-text-field ng-model="companyMaster.CompanyState" mi-field-property="Resources.Company.CompanyProfile.Properties.State" ng-required="true" ng-maxlength="20">
+						</mi-text-field>
+
+						<mi-text-field ng-model="companyMaster.CompanyPostalCode" mi-field-property="Resources.Company.CompanyProfile.Properties.Zip" ng-minlength="5" ng-maxlength="20" ng-required="true">
+						</mi-text-field>
+
+						<mi-country-list-field data-ng-model="companyMaster.CompanyCountry" ng-required="true" mi-field-property="Resources.Company.CompanyProfile.Properties.Country">
+						</mi-country-list-field>
+
+						<mi-text-field ng-model="companyMaster.CompanyWebsite" mi-field-property="Resources.Company.CompanyProfile.Properties.CompanyUrl" ng-minlength="5" ng-maxlength="60" ng-required="true">
+						</mi-text-field>
+
+						<mi-select-field ng-model="companyMaster.CompanyNAICSCode" mi-field-property="Resources.Company.CompanyProfile.Properties.NAICScode" ng-minlength="5" ng-maxlength="10" ng-required="true">
+						</mi-select-field>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<!-- row -->
+	</div>
+	<!-- col-md-4 -->
+	<div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <!-- Administrative Contact -->
+                    <legend>Administrative Contact</legend>
+                    <div class="primary-fields">
+                        <mi-text-field ng-model="companyMaster.AdministrativeContactName" mi-field-property="Resources.Company.CompanyProfile.Properties.ContactName" ng-maxlength="30" ng-required="true">
+                        </mi-text-field>
+
+                        <mi-text-field ng-model="companyMaster.AdministrativeContactTitle" mi-field-property="Resources.Company.CompanyProfile.Properties.ContactTitle" ng-maxlength="30" ng-required="true">
+                        </mi-text-field>
+
+                        <div ng-show="false || companyMaster.CompanyCountry === 'United States' || companyMaster.CompanyCountry === 'Canada'">
+                            <div class="row phone">
+                                <div class="col-md-12">
+                                    <mi-tel-field ng-model="companyMaster.AdministrativeContactTelephone" mi-field-property="Resources.Company.CompanyProfile.Properties.Phone" ng-maxlength="20" ng-required="true">
+                                    </mi-tel-field>
+                                </div>
+                                <!--<div class="col-md-4">-->
+                                    <!--<mi-text-field ng-model="phone.extension" mi-field-property="Views.Login.Register.Extension" ng-maxlength="3"></mi-text-field>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <div ng-show="true && companyMaster.CompanyCountry !== 'United States' && companyMaster.CompanyCountry !== 'Canada'">
+                            <mi-text-field ng-model="companyMaster.AdministrativeContactTelephone" mi-field-property="Resources.Company.CompanyProfile.Properties.Phone" ng-maxlength="20" ng-required="true">
+                            </mi-text-field>
+                        </div>
+                        <mi-email-field ng-model="companyMaster.AdministrativeContactEmail" mi-field-property="Resources.Company.CompanyProfile.Properties.Email" ng-maxlength="40" ng-required="true">
+                        </mi-email-field>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+		<div class="row">
+			<div class="col-md-12">
+
+				<fieldset>
+					<!-- Primary Billing Contact -->
+					<legend class="legend">Primary Billing Contact</legend>
+					<div class="primary-fields">
+
+						<mi-checkbox-field mi-field-property="Resources.Company.CompanyProfile.Properties.SameAsAdministrative" ng-model="companyMaster.IsPrimaryBillingContactAsAdmin">
+						</mi-checkbox-field>
+
+						<mi-text-field ng-readonly="companyMaster.IsPrimaryBillingContactAsAdmin" ng-model="companyMaster.PrimaryBillingContactName" mi-field-property="Resources.Company.CompanyProfile.Properties.ContactName" ng-maxlength="30" ng-required="true">
+						</mi-text-field>
+
+                        <div ng-show="false || companyMaster.CompanyCountry === 'United States' || companyMaster.CompanyCountry === 'Canada'">
+							<div class="row phone">
+								<div class="col-md-12">
+									<mi-tel-field ng-readonly="companyMaster.IsPrimaryBillingContactAsAdmin" ng-model="companyMaster.PrimaryBillingContactTelephone" mi-field-property="Resources.Company.CompanyProfile.Properties.Phone" ng-maxlength="20" ng-required="true">
+									</mi-tel-field>
+								</div>
+								<!--<div class="col-md-1">-->
+									<!--{{resourcesObj.Views.Login.Register.Extension.DisplayText}}-->
+								<!--</div>-->
+								<!--<div class="col-md-3">-->
+									<!--<mi-text-field ng-readonly="companyMaster.IsPrimaryBillingContactAsAdmin" class="no-label" ng-model="phone.extension" mi-field-property="Views.Login.Register.Extension" ng-maxlength="3"></mi-text-field>-->
+								<!--</div>-->
+							</div>
+						</div>
+                        <div ng-show="true && companyMaster.CompanyCountry !== 'United States' && companyMaster.CompanyCountry !== 'Canada'">
+							<mi-text-field ng-readonly="companyMaster.IsPrimaryBillingContactAsAdmin" ng-model="companyMaster.PrimaryBillingContactTelephone" mi-field-property="Resources.Company.CompanyProfile.Properties.Phone" ng-maxlength="20" ng-required="true">
+							</mi-text-field>
+						</div>
+
+						<mi-email-field mi-readonly="companyMaster.IsPrimaryBillingContactAsAdmin" ng-model="companyMaster.PrimaryBillingContactEmail" mi-field-property="Resources.Company.CompanyProfile.Properties.Email" ng-maxlength="40" ng-required="true">
+						</mi-email-field>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <legend>Multi-currency</legend>
+                    <div class="primary-fields">
+                        <mi-checkbox-field mi-field-property="Resources.Company.CompanyProfile.Properties.MultiCurrency" ng-model="companyMaster.IsMultiCurrency">
+                        </mi-checkbox-field>
+
+                        <mi-select-field mi-field-property="Resources.Company.CompanyProfile.Properties.Currencies" ng-model="companyMaster.Currency">
+                        </mi-select-field>
+
+                    </div>
+                </fieldset>
+            </div>
+            <!-- col-md-4 -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <fieldset>
+                    <!-- Primary Billing Contact -->
+                    <legend>Secondary Billing Contact</legend>
+                    <div class="primary-fields">
+
+                        <mi-checkbox-field mi-field-property="Resources.Company.CompanyProfile.Properties.SameAsPrimary" ng-model="companyMaster.IsSecondaryBillingContactAsPrimary">
+                        </mi-checkbox-field>
+
+                        <mi-text-field ng-readonly="companyMaster.IsSecondaryBillingContactAsPrimary" ng-model="companyMaster.SecondaryBillingContactName" mi-field-property="Resources.Company.CompanyProfile.Properties.ContactName" ng-maxlength="30" ng-required="true">
+                        </mi-text-field>
+
+                        <div ng-show="false || companyMaster.CompanyCountry === 'United States' || companyMaster.CompanyCountry === 'Canada'">
+                            <div class="row phone">
+                                <div class="col-md-12">
+                                    <mi-tel-field ng-readonly="companyMaster.IsSecondaryBillingContactAsPrimary" ng-model="companyMaster.SecondaryBillingContactTelephone" mi-field-property="Resources.Company.CompanyProfile.Properties.Phone" ng-maxlength="20" ng-required="true">
+                                    </mi-tel-field>
+                                </div>
+                                <!--<div class="col-md-1">-->
+                                    <!--{{resourcesObj.Views.Login.Register.Extension.DisplayText}}-->
+                                <!--</div>-->
+                                <!--<div class="col-md-3">-->
+                                    <!--<mi-text-field class="no-label" ng-readonly="companyMaster.IsSecondaryBillingContactAsPrimary" ng-model="phone.extension" mi-field-property="Views.Login.Register.Extension" ng-maxlength="3"></mi-text-field>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <div ng-show="true && companyMaster.CompanyCountry !== 'United States' && companyMaster.CompanyCountry !== 'Canada'">
+                            <mi-text-field ng-readonly="companyMaster.IsSecondaryBillingContactAsPrimary" ng-model="companyMaster.SecondaryBillingContactTelephone" mi-field-property="Resources.Company.CompanyProfile.Properties.Phone" ng-maxlength="20" ng-required="true">
+                            </mi-text-field>
+                        </div>
+
+                        <mi-email-field mi-readonly="companyMaster.IsSecondaryBillingContactAsPrimary" ng-model="companyMaster.SecondaryBillingContactEmail" mi-field-property="Resources.Company.CompanyProfile.Properties.Email" ng-maxlength="40" ng-required="true">
+                        </mi-email-field>
+                    </div>
+                </fieldset>
+
+
+            </div>
+        </div>
+    </div>
+	<!-- col-md-4 -->
+    <div class="col-md-12">
+        <div ng-show="r.show" class="alert alert-{{r.status}}" role="alert">
+            <button type="button" class="close" ng-click="r.show = false"><span aria-hidden="true">&times;</span></button>
+            {{r.message}}
+        </div>
+    </div>
+</div>
+<!-- row -->

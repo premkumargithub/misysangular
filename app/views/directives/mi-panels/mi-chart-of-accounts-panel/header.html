@@ -1,0 +1,13 @@
+<ng-include src="'views/directives/mi-panels/controls/navigate-prev-next.html'"></ng-include>
+<div class="primary-fields">
+    <div class="row">
+        <div class="col-md-4">
+            <mi-text-field ng-maxlength="20" mi-field-property="Resources.Accounting.Properties.AccountID" ng-model="account.AccountSetID" mi-readonly="false" ng-disabled="true" ng-required="true"></mi-text-field>
+        </div>
+        <div class="col-md-6">
+            <mi-text-field ng-maxlength="30" mi-field-property="Resources.Accounting.Properties.AccountName" ng-model="account.AccountSetName" mi-readonly="false" ng-required="true"></mi-text-field>
+        </div>
+    </div>
+</div>
+<ng-include src="'views/directives/mi-panels/controls/save-cancel-delete.html'"></ng-include>
+<div class="clearfix"></div>

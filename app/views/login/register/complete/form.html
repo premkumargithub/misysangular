@@ -1,0 +1,14 @@
+<br /><br />
+<h1 style="text-align:center;">Your free trial has been activated.</h1>
+<br />
+<p style="text-align:center;">
+    Please follow the instructions in the email we just sent to 
+    <span ng-if="company.EmailAddress">{{company.EmailAddress}}.</span>
+	<span ng-if="!company.EmailAddress">the provided email address.</span>
+</p>
+<p style="text-align:center;">
+    Note: If you don't find this email right away, be sure to check your spam filter.
+</p>
+<br />
+<a style="display:block; text-align:center;" ui-sref="base.login-template.default">Continue to the login page</a>
+<br /><br />

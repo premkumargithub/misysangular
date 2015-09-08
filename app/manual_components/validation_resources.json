@@ -1,0 +1,29 @@
+{
+	"Inputs": {
+		"Checkbox": {
+		},
+		"Password": {
+			"Pattern": "/^(?=[0-9a-zA-Z]*[!@#$%&+?*])(?=[a-zA-Z!@#$%&+?]*\\d)(?=[0-9A-Z!@#$%&+?]*[a-z])(?=[0-9a-z!@#$%&+?]*[A-Z])[0-9a-zA-Z!@#$%&+?]{8,}$/" 
+		}
+	},
+	"Resources": {
+		"RecoveryValues": {
+			"Properties": {
+				"AuthCode": {
+					"Maxlength": 36
+				}
+			}
+		},
+		"User": {
+			"Properties": {
+				"ID": {
+					"Capitalized": ""
+				},
+				"SessionTimeOut": {
+					"Max": 1440,
+					"Min": 15
+				}
+			}
+		}
+	}
+}

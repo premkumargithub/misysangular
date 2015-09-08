@@ -1,0 +1,25 @@
+<div class="controls">
+	<div class="row">
+		<div class="col-md-4">
+			<mi-button
+				class="btn btn-success"
+				mi-button-click="btnSave()"
+				mi-button-disabled="saveDisabled() || panelForm.$invalid || panelForm.$pristine"
+				mi-button-text="{{::resourcesObj.Views.Home.MainContent.GenericPanel.SaveButton.DisplayText}}"
+				mi-button-loading-text="Saving"
+			></mi-button>
+		</div>
+		<div class="col-md-4">
+			<button class="btn btn-success" ng-click="btnCancel()" ng-disabled="cancelDisabled()">{{::resourcesObj.Views.Home.MainContent.GenericPanel.CancelButton.DisplayText}}</button>
+		</div>
+		<div class="col-md-4">
+			<mi-button
+				class="btn btn-link"
+				mi-button-click="btnDelete()"
+				mi-button-disabled="deleteDisabled()"
+				mi-button-text="{{::resourcesObj.Views.Home.MainContent.GenericPanel.DeleteButton.DisplayText}}"
+				mi-button-loading-text="Deleting"
+			></mi-button>
+		</div>
+	</div>
+</div>

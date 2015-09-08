@@ -1,0 +1,35 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<h1>{{::resourcesObj.Resources.ItemValuations.DisplayText}}</h1>
+		<table class="item-valuations">
+			<thead>
+				<tr>
+					<th></th>
+					<th>{{::resourcesObj.Resources.Item.Properties.Cost.DisplayText}}</th>
+					<th>{{::resourcesObj.Resources.Item.Properties.StockQuantity.DisplayText}}</th>
+					<th>{{::resourcesObj.Resources.Item.Properties.WipQuantity.DisplayText}}</th>
+					<th>{{::resourcesObj.Resources.Item.Properties.ReserveQuantity.DisplayText}}</th>
+					<th>{{::resourcesObj.Resources.Item.Properties.OnOrderQuantity.DisplayText}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Quantity</td>
+					<td></td>
+					<td>{{item.StockQuantity}}</td>
+					<td>{{item.WipQuantity}}</td>
+					<td>{{item.ReserveQuantity}}</td>
+					<td>{{item.OnOrderQuantity}}</td>
+				</tr>
+				<tr ng-repeat="valuation in valuations">
+					<td>{{::resourcesObj.Resources.ItemValuations.Properties.CostType.Options[valuation.CostType]}}</td>
+					<td>${{valuation.UnitCost}}</td>
+					<td>${{valuation.Stock}}</td>
+					<td>${{valuation.Wip}}</td>
+					<td>${{valuation.Reserve}}</td>
+					<td>${{valuation.OnOrder}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="mi-field email">
+	<label>{{::displayText}}</label>
+	<div class="edit" ng-hide="isReadonly()">
+		<input
+			class="form-control" 
+			type="email" 
+			ng-model="ngModel"
+			ng-model-options="{
+				allowInvalid: true
+			}"
+			ng-required="ngRequired"
+			ng-readonly="ngReadonly"
+			ng-disabled="ngDisabled"
+			mi-maxlength="ngMaxlength"
+			validate-email
+		></input>
+		<mi-tooltip-revisit text="'Field requires input'" show="!validRequired()"></mi-tooltip-revisit>
+		<mi-tooltip-revisit text="'Email address provided is invalid'" show="!validEmail()"></mi-tooltip-revisit>
+	</div>
+	<div class="readonly" ng-show="isReadonly()">
+		<div class="not-empty" ng-hide="isEmpty()">
+			<p><a href="mailto:{{ngModel}}">{{ngModel}}</a></p>
+		</div>
+		<div class="empty" ng-show="isEmpty()">
+			<p class="no-data">No data</p>
+		</div>
+	</div>
+</div>

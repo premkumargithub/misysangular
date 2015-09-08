@@ -1,0 +1,41 @@
+#registration form[name="confirm"] {
+	.grid {
+			display: table;
+			margin-top:.925em;
+			table-layout: auto;
+			width: 100%;
+	}
+	.grid-row {
+			display: table-row;
+
+			.grid-cell {
+				padding-top: .25em;
+		
+			&.expand {
+				display: table-cell;
+				max-width: 0;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				width: 100%;
+			}
+			&.shrink {
+				display: table-cell;
+				white-space: nowrap;
+			}
+			&.grid-label {
+				color: #738FA8;
+				font-weight:bold;
+				padding-right: .5em;
+				text-align:right;
+			}
+			
+			span {
+				display:block;
+			}
+		}
+	}
+}
+.note-confirm-page{
+	color: #738FA8;
+}

@@ -1,0 +1,253 @@
+<!doctype html>
+<!--[if lte IE 9]> <html class="no-js lte-ie9"> <![endif]-->
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MISys Inventory</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/ico">
+
+	<!-- build:css styles/bootstrap.css -->
+	<link rel="stylesheet" href="manual_components/bootstrap/css/bootstrap.min.css">
+	<!-- endbuild -->
+	<!-- build:css({.tmp, app}) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+	<!-- build:css styles/perfect-scrollbar.css -->
+	<link rel="stylesheet" href="bower_components/perfect-scrollbar/src/perfect-scrollbar.css">
+	<!-- endbuild -->
+	<!-- build:css styles/kendo-common.css -->
+	<link rel="stylesheet" href="manual_components/kendo-ui/styles/kendo.common.min.css">
+	<!-- endbuild -->
+	<!-- build:css styles/kendo-silver.css -->
+	<link rel="stylesheet" href="manual_components/kendo-ui/styles/kendo.silver.min.css">
+	<!-- endbuild -->
+	<!-- build:css styles/jquery-ui-theme.css -->
+	<link rel="stylesheet" href="bower_components/jquery-ui/themes/ui-lightness/jquery-ui.min.css">
+	<!-- endbuild -->
+
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpoizcttxi7npErv0b3PYVs8Woo2XoZBg"></script>
+</head>
+
+<body ng-app="voyagerUiApp">
+	<!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+	<div class="browser-message table">
+		<div class="table-cell table-cell-align-middle">
+			<h1 class="js-disabled">Javascript is disabled in this browser. Please enable Javascript to use this application.</h1>
+			<h1 class="old-browser">MISys Enterprise is compatible with most new browsers. This includes Internet Explorer 10+, Google Chrome, and Firefox.</a></h1>
+		</div>
+	</div>
+
+	<!-- Add your site or application content here -->
+	<div class="container" ui-view="base-content"></div>
+
+	<div id="image-preload">
+		<img src="/images/eye.png" title="" alt="" height="1" width="1" />
+		<img src="/images/ee-misys-university-icon.png" title="" alt="" height="1" width="1" />
+		<img src="/images/help-icon-28x28.png" title="" alt="" height="1" width="1" />
+		<img src="/images/icon-help-grey-16x16.png" title="" alt="" height="1" width="1" />
+		<img src="/images/list-icon_25x14.png" title="" alt="" height="1" width="1" />
+		<img src="/images/loading.gif" title="" alt="" height="1" width="1" />
+		<img src="/images/logo-enterprise-383x41.png" title="" alt="" height="1" width="1" />
+		<img src="/images/minus.png" title="" alt="" height="1" width="1" />
+		<img src="/images/mim-383x41.png" title="" alt="" height="1" width="1" />
+		<img src="/images/new-window-icon_128x120.png" title="" alt="" height="1" width="1" />
+		<img src="/images/plus.png" title="" alt="" height="1" width="1" />
+		<img src="/images/reveal-semi-transparent.png" title="" alt="" height="1" width="1" />
+	</div>
+
+	<script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-translate/angular-translate.min.js"></script>
+	<script src="bower_components/mi-angular-lib/dist/scripts/mi-angular-lib.js"></script>
+	<script src="bower_components/angular-input-masks/angular-input-masks.js"></script>
+	<script src="manual_components/kendo-ui/js/kendo.web.min.js"></script>
+	<script src="bower_components/d3/d3.min.js"></script>
+	<script src="scripts/templates.js"></script>
+
+	<!-- build:js scripts/plugins.js -->
+	<script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+	<script src="manual_components/bootstrap/js/bootstrap.js"></script>
+	<script src="bower_components/perfect-scrollbar/src/jquery.mousewheel.js"></script>
+	<script src="bower_components/perfect-scrollbar/src/perfect-scrollbar.js"></script>
+	<script src="bower_components/angular-google-picker/src/google-picker.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js scripts/modules.js -->
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js scripts/scripts.js -->
+	<script src="scripts/app.js"></script>
+	<script src="scripts/config-accounting.js"></script>
+	<script src="scripts/config-admin.js"></script>
+	<script src="scripts/config-dashboard.js"></script>
+	<script src="scripts/config-inventory-control.js"></script>
+	<script src="scripts/config-login.js"></script>
+	<script src="scripts/config-master-files.js"></script>
+	<script src="scripts/config-planning.js"></script>
+	<script src="scripts/config-production.js"></script>
+	<script src="scripts/config-purchasing.js"></script>
+	<script src="scripts/config-reports.js"></script>
+	<script src="scripts/config-sales.js"></script>
+	<script src="scripts/http-wait-time.js"></script>
+	<script src="scripts/constants.js"></script>
+
+	<script src="scripts/controllers/home/about.js"></script>
+	<script src="scripts/controllers/home/external-actions-ctrl.js"></script>
+	<script src="scripts/controllers/home/home-ctrl.js"></script>
+	<script src="scripts/controllers/home/submenus-ctrl.js"></script>
+	<script src="scripts/controllers/home/user-misc-tools-ctrl.js"></script>
+	<script src="scripts/controllers/home/accounting/chart-of-accounts/chart-of-accounts.js"></script>
+	<script src="scripts/controllers/home/accounting/chart-of-accounts/chart-of-accounts-selection.js"></script>
+	<script src="scripts/controllers/home/admin/company-profile/company-profile.js"></script>
+	<script src="scripts/controllers/home/admin/company-profile/company-master.js"></script>
+	<script src="scripts/controllers/home/admin/company-profile/company-preferences.js"></script>
+	<script src="scripts/controllers/home/admin/company-profile/company-subscriptions.js"></script>
+	<script src="scripts/controllers/home/admin/security-groups/security-groups.js"></script>
+	<script src="scripts/controllers/home/admin/security-groups/security-groups-selection.js"></script>
+	<script src="scripts/controllers/home/admin/security-profiles/security-profiles.js"></script>
+	<script src="scripts/controllers/home/admin/security-profiles/security-profiles-selection.js"></script>
+	<script src="scripts/controllers/home/admin/workflows/workflow.js"></script>
+	<script src="scripts/controllers/home/admin/workflows/workflow-selection.js"></script>
+	<script src="scripts/controllers/home/admin/users/admin-users.js"></script>
+	<script src="scripts/controllers/home/admin/users/admin-users-selection.js"></script>
+	<script src="scripts/controllers/home/admin/departments/departments.js"></script>
+	<script src="scripts/controllers/home/admin/departments/departments-selection.js"></script>
+
+	<script src="scripts/controllers/home/dashboard/dashboard.js"></script>
+	<script src="scripts/controllers/home/master-files/boms/boms.js"></script>
+	<script src="scripts/controllers/home/master-files/boms/boms-selection.js"></script>
+	<script src="scripts/controllers/home/master-files/customers/customers.js"></script>
+	<script src="scripts/controllers/home/master-files/items/items.js"></script>
+	<script src="scripts/controllers/home/master-files/items/items-selection.js"></script>
+	<script src="scripts/controllers/home/master-files/jobs/jobs.js"></script>
+	<script src="scripts/controllers/home/master-files/jobs/jobs-selection.js"></script>
+	<script src="scripts/controllers/home/master-files/locations/locations.js"></script>
+	<script src="scripts/controllers/home/master-files/locations/locations-selection.js"></script>
+	<script src="scripts/controllers/home/master-files/suppliers/suppliers.js"></script>
+	<script src="scripts/controllers/home/master-files/suppliers/suppliers-selection.js"></script>
+	<script src="scripts/controllers/home/sidebar-ctrl.js"></script>
+    <script src="scripts/filters/tel.js"></script>
+	<script src="scripts/controllers/login/base-login.js"></script>
+	<script src="scripts/controllers/login/login.js"></script>
+	<script src="scripts/controllers/login/password-recovery.js"></script>
+	<script src="scripts/controllers/login/password-authorization.js"></script>
+	<script src="scripts/controllers/login/password-security.js"></script>
+	<script src="scripts/controllers/login/password-reset.js"></script>
+	<script src="scripts/controllers/login/register/confirm.js"></script>
+	<script src="scripts/controllers/login/register/email-confirmation.js"></script>
+	<script src="scripts/controllers/login/register/register-base.js"></script>
+	<script src="scripts/controllers/login/register/step-one.js"></script>
+	<script src="scripts/controllers/login/register/step-two.js"></script>
+	<script src="scripts/controllers/modal-window.js"></script>
+	<script src="scripts/directives/controllers/mi-field.js"></script>
+	<script src="scripts/directives/controllers/mi-panel.js"></script>
+	<script src="scripts/directives/custom-title.js"></script>
+	<script src="scripts/directives/equal.js"></script>
+	<script src="scripts/directives/data-grids/accounts.js"></script>
+	<script src="scripts/directives/data-grids/boms.js"></script>
+	<script src="scripts/directives/data-grids/item-location-details.js"></script>
+	<script src="scripts/directives/data-grids/items.js"></script>
+	<script src="scripts/directives/data-grids/job-costs.js"></script>
+	<script src="scripts/directives/data-grids/job-quantities.js"></script>
+	<script src="scripts/directives/data-grids/jobs.js"></script>
+	<script src="scripts/directives/data-grids/location-items.js"></script>
+	<script src="scripts/directives/data-grids/locations.js"></script>
+	<script src="scripts/directives/data-grids/mi-data-grid-revisit.js"></script>
+	<script src="scripts/directives/data-grids/security-groups.js"></script>
+	<script src="scripts/directives/data-grids/security-profiles.js"></script>
+	<script src="scripts/directives/data-grids/workflow-data-grid.js"></script>
+	<script src="scripts/directives/data-grids/suppliers.js"></script>
+	<script src="scripts/directives/data-grids/suppliers-items-grid.js"></script>
+	<script src="scripts/directives/data-grids/suppliers-price-break-grid.js"></script>
+	<script src="scripts/directives/data-grids/department-data-grid.js"></script>
+	<script src="scripts/directives/data-grids/department-members-data-grid.js"></script>
+	<script src="scripts/directives/data-grids/users.js"></script>
+	<script src="scripts/directives/data-grids/payment-history.js"></script>
+	<script src="scripts/directives/fields/mi-checkbox-field.js"></script>
+	<script src="scripts/directives/fields/mi-color-field.js"></script>
+	<script src="scripts/directives/fields/mi-country-list-field.js"></script>
+	<script src="scripts/directives/fields/mi-email-field.js"></script>
+	<script src="scripts/directives/fields/mi-fax-field.js"></script>
+	<script src="scripts/directives/fields/mi-finder-field.js"></script>
+	<script src="scripts/directives/fields/mi-number-field.js"></script>
+	<script src="scripts/directives/fields/mi-password-field.js"></script>
+	<script src="scripts/directives/fields/mi-select-field.js"></script>
+	<script src="scripts/directives/fields/mi-tel-field.js"></script>
+	<script src="scripts/directives/fields/mi-tel-ext-field.js"></script>
+	<script src="scripts/directives/fields/mi-text-field.js"></script>
+	<script src="scripts/directives/fields/mi-textarea-field.js"></script>
+	<script src="scripts/directives/fields/mi-textarea-supplier-field.js"></script>
+	<script src="scripts/directives/fields/mi-file-field.js"></script>
+	<script src="scripts/directives/fields/mi-time-field.js"></script>
+	<script src="scripts/directives/fields/mi-zip-field.js"></script>
+	<script src="scripts/directives/mark-required-fields.js"></script>
+	<script src="scripts/directives/only-numbers.js"></script>
+	<script src="scripts/directives/mi-accordian.js"></script>
+	<script src="scripts/directives/mi-application-mode-slider.js"></script>
+	<script src="scripts/directives/mi-button.js"></script>
+	<script src="scripts/directives/mi-caps-tooltip.js"></script>
+	<script src="scripts/directives/mi-help-menu.js"></script>
+	<script src="scripts/directives/mi-http-alert-revisit.js"></script>
+	<script src="scripts/directives/mi-list-panel.js"></script>
+	<script src="scripts/directives/mi-mask-editor.js"></script>
+	<script src="scripts/directives/mi-maxlength.js"></script>
+	<script src="scripts/directives/mi-template-tabs.js"></script>
+	<script src="scripts/directives/mi-bound-title.js"></script>
+	<script src="scripts/directives/mi-tooltip.js"></script>
+	<script src="scripts/directives/mi-tooltip-revisit.js"></script>
+	<script src="scripts/directives/password-strength-meter.js"></script>
+	<script src="scripts/directives/pie-chart.js"></script>
+	<script src="scripts/directives/resource-panels/accounts.js"></script>
+	<script src="scripts/directives/resource-panels/boms.js"></script>
+	<script src="scripts/directives/resource-panels/items.js"></script>
+	<script src="scripts/directives/resource-panels/jobs.js"></script>
+	<script src="scripts/directives/resource-panels/locations.js"></script>
+	<script src="scripts/directives/resource-panels/security-groups.js"></script>
+	<script src="scripts/directives/resource-panels/security-profiles.js"></script>
+	<script src="scripts/directives/resource-panels/resource-panel.js"></script>
+	<script src="scripts/directives/resource-panels/suppliers.js"></script>
+	<script src="scripts/directives/resource-panels/users.js"></script>
+	<script src="scripts/directives/resource-panels/departments.js"></script>
+	<script src="scripts/directives/resource-panels/workflows.js"></script>
+	<script src="scripts/directives/scroll-to-element.js"></script>
+	<script src="scripts/directives/show-when-scrolling.js"></script>
+	<script src="scripts/directives/validate-email.js"></script>
+	<script src="scripts/directives/validate-equal.js"></script>
+	<script src="scripts/directives/validate-password.js"></script>
+	<script src="scripts/directives/validate-us-zip.js"></script>
+	<script src="scripts/services/active-application-mode.js"></script>
+	<script src="scripts/services/application-modes.js"></script>
+	<script src="scripts/services/company-registration.js"></script>
+	<script src="scripts/services/default-http-interceptors.js"></script>
+	<script src="scripts/services/geocoder.js"></script>
+	<script src="scripts/services/jquery.js"></script>
+	<script src="scripts/services/login.js"></script>
+	<script src="scripts/services/messaging.js"></script>
+	<script src="scripts/services/messaging-window.js"></script>
+	<script src="scripts/services/modal-window.js"></script>
+	<script src="scripts/services/passwordRecoveryValues.js"></script>
+	<script src="scripts/services/resource-panel.js"></script>
+	<script src="scripts/services/utilities/grid-data-source.js"></script>
+	<script src="scripts/services/utilities/help-resources.js"></script>
+	<script src="scripts/services/utilities/resources.js"></script>
+	<script src="scripts/services/utilities/validation-resources.js"></script>
+	<script src="scripts/services/utilities/view-modes.js"></script>
+	<script src="http://apis.google.com/js/client.js"></script>
+	<script src="http://apis.google.com/js/api.js"></script>
+	<!-- endbuild -->
+</body>
+
+</html>

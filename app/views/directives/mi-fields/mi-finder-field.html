@@ -1,0 +1,93 @@
+<div class="mi-field mi-finder-field">
+	<label>{{::displayText}}</label>
+	<div class="input-group">
+<!--
+		<input class="form-control" type="text" ng-disabled="true" ng-required="ngRequired" ng-value="modelValue"></input>
+		<input type="hidden" ng-model="ngModel" >
+-->
+<input class="form-control" type="text" ng-disabled="true" name="{{name}}" ng-required="ngRequired" ng-model="ngModel"></input>
+
+		<span class="input-group-addon" ng-class="{disabled:ngDisabled}" ng-click="showModalFinder(gridClass)">
+			<span class="glyphicon glyphicon-search"></span>
+		</span>
+	</div>
+
+	<div class="modal-finder {{gridClass}}">
+		<div class="modal fade" id="modal-grid" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Group Finder</h4>
+					</div>
+					<div class="modal-body" style="height: 475px;">
+						<div class="input-group" style="background-color:#e0e0e0; border-radius:10px; padding: .25em .5%; width:100%;">
+							<div class="input-group-btn" style="background-color:inherit; border:0; position:static; text-align:center; width:5%;">
+								<span ng-click="toggleDropDown()" class="finder-dropdown-button">
+									<span class="caret"></span>
+								</span>
+							</div>
+							<div class="finder-dropdown">
+								<span ng-class="{selected:!filterShown}" ng-click="hideFilter()" style="padding: .675em 1em;">Search in:</span>
+								<span ng-class="{selected:filterShown}" ng-click="showFilter()" style="padding: .675em 2em;">Filter</span>
+								<div class="search-area" ng-show="!filterShown">
+									<ul>
+										<li class="selected">All fields</li>
+										<li>Group ID</li>
+										<li>Description</li>
+									</ul>
+								</div>
+								<div ng-show="filterShown" class="filter-area">
+									<div class="row">
+										<div class="col-md-4">
+											<select class="form-control">
+												<option></option>
+											</select>
+										</div>
+										<div class="col-md-2">
+											<select class="form-control">
+												<option></option>
+											</select>
+										</div>
+										<div class="col-md-2">
+											<select class="form-control">
+												<option></option>
+											</select>
+										</div>
+										<div class="col-md-4">
+											<input class="form-control" style="height: 2.5em;" type="text" value="" />
+										</div>
+									</div>
+									<br />
+									<div class="row" style="text-align:center;">
+										<button class="btn btn-default" style="background-color:#eee; font-weight:normal; padding:.25em 1em;">Add</button>
+										<button class="btn btn-default" style="background-color:#eee; font-weight:normal; padding:.25em .75em;">Modify</button>
+									</div>
+									<br />
+									<div class="row">
+										<div class="col-md-9">
+											<textarea class="form-control" style="height:200px;"></textarea>
+										</div>
+										<div class="col-md-3">
+											<button class="btn btn-warning" style="font-weight:normal; width:100%; margin-bottom:.5em;">SET</button>
+											<button class="btn btn-link" style="font-weight:normal; width:100%; margin-bottom:.5em;">CANCEL</button>
+											<button class="btn btn-default" style="background-color:#eee; font-weight:normal; width:100%; margin-bottom:.5em;">Clear</button>
+											<button class="btn btn-default" style="background-color:#eee; font-weight:normal; width:100%; margin-bottom:.5em;">Export</button>
+											<button class="btn btn-default" style="background-color:#eee; font-weight:normal; width:100%;">Import</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<input class="form-control" placeholder="Search by All Fields" style="height:2.5em; line-height:2.5em; width:99.9%;" type="text" />
+							<div class="input-group-btn" style="width:10%;">
+								<button class="btn btn-success" style="height:calc(2.5em - 1px); line-height:1.25em; padding:.5em 0px; width:100%;">Find</button>
+							</div>
+						</div>
+						<br />
+						<section class="content"></section>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

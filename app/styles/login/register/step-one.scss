@@ -1,0 +1,18 @@
+form.register.step-one {
+	div.row.phone {
+		position:relative;
+		
+		div.col-md-1 {
+			bottom: .3em;
+			color: #738FA8;
+			font-weight:bold;
+			position: absolute;
+			right: 25%;
+		}
+		div.col-md-3 {
+			bottom: 0;
+			position: absolute;
+			right: 0;
+		}
+	}
+}

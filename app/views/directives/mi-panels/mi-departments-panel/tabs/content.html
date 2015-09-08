@@ -1,0 +1,25 @@
+<div class="row no-stretch">
+	<div class="col-md-6">
+		<fieldset>
+			<legend>Outgoing Messages</legend>
+			<mi-checkbox-field mi-field-property="Resources.Departments.Properties.OutgoingInternalMessages" ng-model="department.CreateInternalMessages"></mi-checkbox-field>
+			<mi-checkbox-field mi-field-property="Resources.Departments.Properties.OutgoingExternalMessages" ng-model="department.CreateExternalMessages"></mi-checkbox-field>
+		</fieldset>
+	</div>
+	<div class="col-md-6">
+		<fieldset>
+			<legend>Incoming Messages</legend>
+			<mi-checkbox-field mi-field-property="Resources.Departments.Properties.IncomingInternalMessages" ng-model="department.AcceptInternalMessages"></mi-checkbox-field>
+			<mi-checkbox-field mi-field-property="Resources.Departments.Properties.IncomingExternalMessages" ng-model="department.AcceptExternalMessages"></mi-checkbox-field>
+		</fieldset>
+	</div>
+</div>
+
+<div class="row  no-stretch">
+	<div class="col-md-12">
+		<label>Current Department Members</label>
+	</div>
+	<div class="col-md-12">
+		<mi-department-members-data-grid contractable="" editable="false"></mi-department-members-data-grid>
+	</div>
+</div>

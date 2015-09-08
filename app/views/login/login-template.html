@@ -1,0 +1,27 @@
+<div class="login-container">
+	<div class="login">
+		<header>
+			<a ui-sref="base.login-template.default">
+                <img src="/images/mim-logo.png" />
+            </a>
+		</header>
+		<section ui-view="login-content"></section>
+		<footer>
+			<a href="javascript:void();">{{resourcesObj.Views.Login.Footer.UsePolicy.DisplayText}}</a><a href="javascript:void();">{{resourcesObj.Views.Login.Footer.PrivacyPolicy.DisplayText}}</a>
+		</footer>
+	</div>
+	
+	<section class="external-actions clearfix">
+		<section class="external-actions-panel">
+			<mi-help-menu
+				mi-help-menu-toggle="toggleHelp"
+				mi-help-menu-toggle-videos="toggleHelpVideos"
+			></mi-help-menu>
+		</section>
+		<section class="levi-buttons">
+			<ul>
+				<li title="Help" data-title-placement="left" ng-class="{active:helpActive}" ng-click="clickHelpIcon()"><span>?</span></li>
+			</ul>
+		</section>
+	</section>
+</div>

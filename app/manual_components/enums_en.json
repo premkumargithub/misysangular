@@ -1,0 +1,1152 @@
+{
+	"FieldLengthConstants": {
+		"BinId": 24,
+		"Fax": 30,
+		"ItemId": 24,
+		"LotNumber": 40,
+		"PickList": 24,
+		"ReferenceNumber": 24,
+		"SalesId": 24,
+		"SerialNumber": 40,
+		"SupplierShortName": 10,
+		"Telephone": 30
+	},
+
+	"HttpConstants": {
+		"BasicAuthEncoding": "iso-8859-1",
+		"BasicAuthScheme": "basic",
+		"BasicAuthSeparator": ":",
+		"TokenAuthScheme": "token",
+		"WWWAuthenticateHeader": "WWW-Authenticate",
+		"DefaultAPIRouteName": "DefaultAPI",
+		"ResetPasswordAPIRouteName": "ResetPasswordAPI",
+		"AdminAPIRouteName": "AdminAPI"
+	},
+		
+	"ApplicationConstants": {
+		"AdminUserID": "ADMIN",
+		"AdminSecurityGroupID": "ADMIN",
+
+		"MM61AdminUserID": "ADMIN",
+		"MM61AdminSecurityGroupID": "ADMIN",
+		"MM61DefaultPassword": "password"
+	},
+		
+	"AccountControl": {
+		"InventoryAsset": 1,
+		"WipAsset": 2,
+		"POLiability": 3,
+		"SupplierLiability": 4,
+		"ResourceLiability": 5,
+		"AssemblyVariance": 6,
+		"CostAdjustmentVariance": 7,
+		"PhysicalInventoryVariance": 8,
+		"PurchasePriceVariance": 9,
+		"ScrapAdjustment": 10,
+		"AssemblyControlRawMaterial": 11,
+		"AssemblyControlResource": 12,
+		"AssemblyControlFinishGood": 13,
+		"DispenseReturnControl": 14,
+		"POReceiptControl": 15,
+		"ResourceTransferControl": 16,
+		"SalesTransferControl": 17,
+		"MiscellaneousItemReceiptControl": 18,
+		"None": 32
+	},
+
+	"AccountingModule": {
+		"None": 0,
+		"Manual": 1,
+		"Simply": 2,
+		"QuickBooks": 3,
+		"Adagio": 4,
+		"Microsoft": 5,
+		"PeachTree": 6,
+		"SAP": 7,
+		"MSSBF": 8,
+		"Simply2008": 9,
+		"Accpac": 10,
+		"Intacct": 11
+	},
+
+	"AccountStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"AccountType": {
+		"IncomeStatement": 0,
+		"BalanceSheet": 1,
+		"RetainedEarnings": 2,
+		"Bank": 3,
+		"AccountReceivable": 4,
+		"OtherCurrentAsset": 5,
+		"FixedAsset": 6,
+		"OtherAsset": 7,
+		"AccountsPayable": 8,
+		"CreditCard": 9,
+		"OtherCurrentLiability": 10,
+		"LongTermLiability": 11,
+		"Equity": 12,
+		"Income": 13,
+		"COGS": 14,
+		"Expense": 15,
+		"OtherIncome": 16,
+		"OtherExpense": 17,
+		"Cash": 18,
+		"InventoryAsset": 19,
+		"Undefined": 100
+	},
+
+	"AdditionalCostStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"AutoBuildOptions": {
+		"Never": 1,
+		"Zero": 2,
+		"Minimum": 3,
+		"Reorder": 4
+	},
+
+	"AutoIncrementOrders": {
+		"None": 0,
+		"System": 1,
+		"User": 2
+	},
+
+	"AutoIncrementTrackingNumbers": {
+		"None": 0,
+		"System": 1
+	},
+
+	"AzureDataDeployment": [
+		"Dev",
+		"QA",
+		"Production"
+	],
+
+	"BinDispensationMethod": {
+		"Manual": 0,
+		"Automatic": 1
+	},
+
+	"BinReconciliationRecordDetailType": {
+		"DecrementStock": 0,
+		"IncrementStock": 1
+	},
+
+	"BinReconciliationRecordTransactionType": {
+		"DispenseStock": 1,
+		"DispenseReserve": 2,
+		"WriteOffItem": 4,
+		"CommitfromStock": 5,
+		"CommitfromReserve": 6,
+		"AssemblefromStock": 8,
+		"AssemblefromReserve": 9,
+		"AssemblefromWIP": 10,
+		"ReceivefromSupplier": 11,
+		"ReceiveagainstPO": 12,
+		"ItemtoSales": 13,
+		"RangetoSales": 14,
+		"GrouptoSales": 15,
+		"DispenseGroupfromStock": 16,
+		"DispenseGroupfromReserve": 17,
+		"CountStock": 21,
+		"CommitItemfromStock": 23,
+		"MoveStock": 24,
+		"CommitItemfromReserve": 26,
+		"CloseMO": 27,
+		"CommitGroupfromStock": 28,
+		"DispenseMOResources": 29,
+		"ScrapKitComponentWIP": 31,
+		"CommitGroupfromReserve": 32
+	},
+
+	"BinStatus": {
+		"Available": 0,
+		"NotAvailable": 1
+	},
+
+	"BomDetailType": {
+		"Standard": 0,
+		"Comment": 1,
+		"Setup": 2,
+		"Consumed": 3
+	},
+
+	"CalendarType": {
+		"Holiday": 0,
+		"OverrideWorkday": 1
+	},
+
+	"CompanyType": {
+		"System": 0,
+		"Company": 1
+	},
+
+	"CostAdjustmentBatchDetailStatus": {
+		"EntryOK": 0,
+		"InvalidAdjustment": 1,
+		"InvalidItem": 2,
+		"DataError": 3
+	},
+
+	"CostAdjustmentBatchStatus": {
+		"NotPosted": 0,
+		"Modified": 1,
+		"Posted": 2,
+		"PostedWithErrors": 3
+	},
+
+	"CostMethod": {
+		"Standard": 0,
+		"Average": 1,
+		"FIFO": 2,
+		"LIFO": 3
+	},
+
+	"CurrencyConversion": [
+		"ToSource",
+		"ToFunctional"
+	],
+
+	"CurrencyNegativeDisplay": {
+		"TrailingSign": 1,
+		"LeadingSign": 2,
+		"Brackets": 3
+	},
+
+	"CurrencyOperator": {
+		"Multiply": 1,
+		"Divide": 2
+	},
+
+	"CurrencyRateDateMatching": {
+		"Exact": 1,
+		"Later": 2,
+		"Earlier": 3
+	},
+
+	"CurrencySymbolPosition": {
+		"BeforeWithSpace": 0,
+		"BeforeWithoutSpace": 1,
+		"AfterWithSpace": 2,
+		"AfterWithoutSpace": 3
+	},
+
+	"CustomFieldTable": {
+		"Item": 0,
+		"Supplier": 1,
+		"Job": 2,
+		"Location": 3,
+		"Bom": 4,
+		"BomDetail": 5,
+		"PurchaseOrder": 6,
+		"PurchaseOrderDetail": 7,
+		"MfgOrder": 8,
+		"MfgOrderDetail": 9,
+		"WorkOrder": 10,
+		"WorkOrderDetail": 11,
+		"Bin": 12,
+		"ItemLocationDetail": 13,
+		"Schedule": 14,
+		"SerialLotTracking": 15,
+		"Tool": 16,
+		"WorkCenter": 17,
+		"BomRoutingDetail": 18,
+		"MfgOrderRoutingDetail": 19,
+		"WorkCenterClass": 20
+	},
+
+	"CustomFieldType": {
+		"SingleLineText": 0,
+		"Boolean": 1,
+		"WholeNumber": 2,
+		"DecimalNumber": 3,
+		"DateTime": 4,
+		"SelectionList": 5,
+		"MultiLineText": 6,
+		"InternetUrl": 7,
+		"EmailAddress": 8,
+		"FilePath": 9
+	},
+
+	"EmailFormat": {
+		"Text": 0,
+		"RichText": 1,
+		"HTML": 2
+	},
+
+	"EntryStatus": {
+		"EntryOK": 0,
+		"UnknownError": 1,
+		"InvalidItem": 2,
+		"InvalidBOM": 3,
+		"InvalidLocation": 4,
+		"InvalidJobNumber": 5,
+		"InvalidSupplier": 6,
+		"InvalidSalesNumber": 7,
+		"InvalidICLocation": 8,
+		"InvalidTransaction": 9,
+		"InvalidAccountSet": 10,
+		"BOMOutOfDate": 11,
+		"InvalidQuantity": 12,
+		"InvalidPOLine": 13,
+		"InvalidBin": 14,
+		"InvalidSerialLotAssignment": 15,
+		"SalesTransferError": 16,
+		"Posted": 100,
+		"Checked": 101
+	},
+
+	"ItemLotDispensationMethod": {
+		"SL Number": 0,
+		"Expiration Date": 1,
+		"FIFO": 2,
+		"LIFO": 3
+	},
+
+	"ItemMonitorActivity": {
+		"None": 0,
+		"Used": 1,
+		"Built": 2,
+		"Received": 3
+	},
+
+	"ItemMonitorStatus": {
+		"Inactive": 0,
+		"Off": 1,
+		"On": 2
+	},
+
+	"ItemReceiptTransactionType": {
+		"PurchaseOrderReceipt": 0,
+		"SupplierReceipt": 1,
+		"Build": 2,
+		"Transfer": 3
+	},
+
+	"ItemReceiptType": {
+		"Standard": 0,
+		"Future": 1
+	},
+
+	"ItemStatus": {
+		"Active": 0,
+		"Inactive": 1,
+		"Engineering": 2
+	},
+
+	"ItemTracking": {
+		"Common Item - Not Tracked": 0,
+		"Lot Tracked": 1,
+		"Serialized": 2
+	},
+
+	"ItemType": {
+		"Raw Material": 0,
+		"Resource": 1,
+		"Assembled": 2,
+		"Bulk Issue": 3,
+		"Outside Processing": 4,
+		"Not Inventoried": 99,
+		"Comment Only": 100
+	},
+
+	"JobDetailType": {
+		"ItemAggregate": 0,
+		"BomItemDetail": 1
+	},
+
+	"JobStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"LicenseType": {
+		"Company": 0,
+		"Users": 1,
+		"BinTracking": 2,
+		"AdvancedPurchasing": 3,
+		"SpreadsheetAccounting": 4,
+		"Sage50Can": 5,
+		"IntuitQuickBooks": 6,
+		"Sage50US": 7,
+		"MicrosoftOfficeAccounting": 8,
+		"Sage300Erp": 9,
+		"Adagio": 10,
+		"Server": 11,
+		"SapBusinessOne": 12,
+		"PeerSupport": 13,
+		"StandardSupport": 14,
+		"PrioritySupport": 15,
+		"MicrosoftSBF": 16,
+		"AdvancedProduction": 17,
+		"MaterialRequirementPlanning": 18,
+		"VideoTraining": 19,
+		"BarCoding": 20,
+		"SerialLotTracking": 21,
+		"LaborTracking": 22,
+		"ShopFloorControl": 23,
+		"CustomReports": 24,
+		"MobileDevices": 25,
+		"Api": 26,
+		"Intacct": 27
+	},
+
+	"LocationStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"MasterLogBinDetailType": {
+		"DecrementStock": 0,
+		"IncrementStock": 1
+	},
+
+	"MasterLogDetailType": {
+		"DecrementCost": 0,
+		"DecrementStock": 1,
+		"DecrementWip": 2,
+		"IncrementCost": 3,
+		"IncrementStock": 4,
+		"IncrementWip": 5,
+		"StockToWip": 6,
+		"WipToStock": 7,
+		"NoTransfer": 8,
+		"DecrementOrder": 9,
+		"IncrementOrder": 10,
+		"DecrementInvoice": 11,
+		"IncrementInvoice": 12,
+		"DecrementReserve": 13,
+		"IncrementReserve": 14
+	},
+
+	"MasterLogExtendedDetailType": {
+		"Credit": 0,
+		"Debit": 1,
+		"Adjustment": 2
+	},
+
+	"MasterLogTransactionType": {
+		"NoTransaction": 0,
+		"DispenseStock": 1,
+		"DispenseReserve": 2,
+		"ReserveItem": 3,
+		"ScrapItem": 4,
+		"AllocateFromStock": 5,
+		"AllocateFromReserve": 6,
+		"ReserveAssembly": 7,
+		"AssembleFromStock": 8,
+		"AssembleFromReserve": 9,
+		"AssembleFromWIP": 10,
+		"ReceiveFromSupplier": 11,
+		"ReceiveAgainstPurchaseOrder": 12,
+		"ItemToSales": 13,
+		"RangeToSales": 14,
+		"AssemblyComponentsToSales": 15,
+		"DispenseAssemblyComponentsFromStock": 16,
+		"DispenseAssemblyComponentsFromReserve": 17,
+		"ReserveAssemblyComponents": 18,
+		"ClosePurchaseOrder": 19,
+		"InvoicePruchaseOrder": 20,
+		"CountStock": 21,
+		"AdjustCost": 22,
+		"AllocateItemFromStock": 23,
+		"MoveStock": 24,
+		"OpenPurchaseOrder": 25,
+		"AllocateItemFromReserve": 26,
+		"CloseMfgOrder": 27,
+		"AllocateAssemblyComponentsFromStock": 28,
+		"DispenseMfgOrderResources": 29,
+		"ScrapComponentWip": 30,
+		"ScrapKitComponentWip": 31,
+		"AllocateAssemblyComponentsFromReserve": 32
+	},
+
+	"MaterialRequirementPlanInitializationType": {
+		"Zero": 0,
+		"CurrentStock": 1,
+		"CurrentActivity": 2,
+		"CurrentStockAndActivity": 3
+	},
+
+	"MaterialRequirementPlanStatus": {
+		"NotProcessed": 0,
+		"Processed": 1
+	},
+
+	"MaterialRequirementSource": {
+		"MasterProductionSchedule": 0,
+		"BuyersAdvice": 1,
+		"StockCheck": 2,
+		"PurchaseForMfgOrder": 3
+	},
+
+	"MfgOrderDetailAutobuildOverride": {
+		"AsSpecified": 0,
+		"Never": 1,
+		"Always": 5,
+		"NA": 10
+	},
+
+	"MfgOrderDetailType": {
+		"Standard": 0,
+		"Comment": 1,
+		"Setup": 2,
+		"Consumed": 3
+	},
+
+	"MfgOrderPrintStatus": {
+		"NotReady": 0,
+		"ReadyToPrint": 1,
+		"PrintedSuccessfully": 2,
+		"FailedPrint": 3,
+		"Recorded": 4,
+		"Revised": 5
+	},
+
+	"MfgOrderPriority": {
+		"Urgent": 0,
+		"High": 1,
+		"Normal": 2,
+		"Low": 3
+	},
+
+	"MfgOrderStatus": {
+		"Inactive": 0,
+		"Released": 1,
+		"Closed": 2
+	},
+
+	"PeriodEndConsolidationLevel": {
+		"NoneFullDetail": 0,
+		"ByDate": 1,
+		"ByFiscalPeriod": 2,
+		"ByAccount": 3
+	},
+
+	"PhysicalInventoryBatchDetailEntryType": {
+		"Total": 0,
+		"SeparateStockAndWip": 1,
+		"StockOnly": 2,
+		"WipOnly": 3
+	},
+
+	"PhysicalInventoryBatchDetailStatus": {
+		"EntryOK": 0,
+		"InvalidType": 1,
+		"InvalidDate": 2,
+		"InvalidItem": 3,
+		"InvalidLocation": 4,
+		"InvalidStockQuantity": 5,
+		"InvalidWipQuantity": 6,
+		"DuplicateEntry": 7,
+		"InvalidBin": 8,
+		"CheckedOK": 9,
+		"PostedOK": 10
+	},
+
+	"PhysicalInventoryBatchStatus": {
+		"NotPosted": 0,
+		"Modified": 1,
+		"Checked": 2,
+		"CheckedWithErrors": 3,
+		"Posted": 4,
+		"PostedWithErrors": 5
+	},
+
+	"PhysicalInventoryBatchType": {
+		"Normal": 0,
+		"Error": 1
+	},
+
+	"PhysicalInventoryWorksheetSelectionCriteria": {
+		"Item": 0,
+		"Cycle": 1,
+		"Date": 2
+	},
+
+	"PhysicalInventoryWorksheetStatus": {
+		"NotEntered": 0,
+		"Entered": 1
+	},
+
+	"PrintFormat": {
+		"Portrait": 0,
+		"Landscape": 1,
+		"Cards": 2
+	},
+
+	"ProductionShiftSplitType": {
+		"Standard": 0,
+		"Optional": 1
+	},
+
+	"PurchaseOrderAdditionalCostDetailInclude": {
+		"No": 0,
+		"Yes": 1
+	},
+
+	"PurchaseOrderAdditionalCostProrationMethod": {
+		"NoProration": 0,
+		"ProrateByQuantity": 1,
+		"ProrateByExtendedPrice": 2,
+		"ProrateByWeight": 3,
+		"ProrateManually": 4
+	},
+
+	"PurchaseOrderAdditionalCostStatus": {
+		"NotProcessed": 0,
+		"ReadyToProcess": 1,
+		"Processed": 2
+	},
+
+	"PurchaseOrderDeliveryMethod": {
+		"Print": 0,
+		"Email": 1,
+		"Both": 2
+	},
+
+	"PurchaseOrderDetailStatus": {
+		"Inactive": 0,
+		"Open": 1,
+		"Closed": 2
+	},
+
+	"PurchaseOrderDetailType": {
+		"Inventory": 0,
+		"MiscellaneousItem": 1,
+		"Comment": 2
+	},
+
+	"PurchaseOrderPrintStatus": {
+		"NotReady": 0,
+		"ReadyToPrint": 1,
+		"Printed": 2,
+		"FailedToPrint": 3,
+		"Recorded": 4,
+		"Revised": 5,
+		"Sent": 6,
+		"FailedToSend": 7,
+		"PrintedAndSent": 8
+	},
+
+	"PurchaseOrderStatus": {
+		"Inactive": 0,
+		"Open": 1,
+		"Closed": 2
+	},
+
+	"PurchaseOrderTaxIncluded": {
+		"No": 0,
+		"Yes": 1
+	},
+
+	"PushAlertDays": {
+		"Monday": 0,
+		"Tuesday": 1,
+		"Wednesday": 2,
+		"Thursday": 3,
+		"Friday": 4,
+		"Saturday": 5,
+		"Sunday": 6
+	},
+
+	"PushAlertIntervals": {
+		"Minutes": 0,
+		"Hourly": 1,
+		"Daily": 2,
+		"Weekly": 3,
+		"Monthly": 4
+	},
+
+	"PushAlertTriggers": {
+		"Always": 0,
+		"OnChange": 1,
+		"OnAdditions": 2
+	},
+
+	"QualifiedSupplierPriceDetailType": {
+		"Price": 0,
+		"Percent": 1
+	},
+
+	"RecentCostUpdateTrigger": {
+		"PurchaseOrderOpen": 0,
+		"PurchaseOrderClose": 1,
+		"Both": 3
+	},
+
+	"ScheduleAuditProcessType": {
+		"Order": 0,
+		"Receive": 1,
+		"StartAssembly": 2,
+		"FinishAssembly": 3,
+		"Move": 4,
+		"StartDisassembly": 5,
+		"FinishDisassembly": 6,
+		"Use": 7,
+		"Recover": 8,
+		"TransferToSales": 9,
+		"InitialStock": 10,
+		"NoProcess": 50,
+		"DirectBuild": 51,
+		"AutoBuild": 52,
+		"ShortageBuild": 53,
+		"ShortageReceive": 54,
+		"Refreshed": 55,
+		"CurrentlyCreated": 100
+	},
+
+	"ScheduleAuditTrigger": {
+		"Current": 1,
+		"Scheduled": 2
+	},
+
+	"ScheduleAuditType": {
+		"Order": 0,
+		"Receive": 1,
+		"StartAssembly": 2,
+		"FinishAssembly": 3,
+		"Move": 4,
+		"StartDisassembly": 5,
+		"FinishDisassembly": 6,
+		"Use": 7,
+		"Recover": 8,
+		"TransferToSales": 9,
+		"InitialStock": 10
+	},
+
+	"ScheduleAutoBuildOverride": {
+		"AsSpecified": 0,
+		"Never": 1,
+		"Zero": 2,
+		"Minimum": 3,
+		"Reorder": 4,
+		"Always": 5
+	},
+
+	"ScheduleMode": {
+		"ItemsWithCurrentActivity": 0,
+		"ItemsWithCurrentActivityOrShortages": 1,
+		"AllItems": 2,
+		"NoItems": 3
+	},
+
+	"ScheduleShortageBasis": {
+		"Zero": 0,
+		"Minimum": 1,
+		"Reorder": 2
+	},
+
+	"ScheduleSortOrder": {
+		"ItemNumber": 0,
+		"FirstShortQuantity": 1,
+		"FirstShortDate": 2,
+		"MaximumShortQuantity": 3
+	},
+
+	"ScheduleStatus": {
+		"Uninitialized": 0,
+		"Available": 1,
+		"Assigned": 2
+	},
+
+	"SchedulingBatchDetailStatus": {
+		"EntryOK": 0,
+		"UnknownError": 1,
+		"InvalidItem": 2,
+		"InvalidBom": 3,
+		"InvalidLocation": 4,
+		"InvalidTransaction": 5,
+		"BomOutOfDate": 6
+	},
+
+	"SchedulingBatchDetailType": {
+		"Order": 0,
+		"Receive": 1,
+		"StartAssembly": 2,
+		"FinishAssembly": 3,
+		"Move": 4,
+		"StartDisassembly": 5,
+		"FinishDisassembly": 6,
+		"Dispense": 7,
+		"Recover": 8,
+		"TransferToSales": 9
+	},
+
+	"SchedulingBatchStatus": {
+		"NotPosted": 0,
+		"Modified": 1,
+		"Posted": 2,
+		"PostedWithErrors": 3
+	},
+
+	"SegmentOperation": {
+		"Overlay": 0,
+		"Segment": 1
+	},
+
+	"SerialLotTrackingStatus": {
+		"Active": 0,
+		"OnHold": 1,
+		"Closed": 2,
+		"Archived": 3
+	},
+
+	"SerialLotTrackingTransactionType": {
+		"Assemble": 0,
+		"DispenseStock": 1,
+		"StockToWip": 2,
+		"DispenseWip": 3,
+		"ScrapItem": 4,
+		"ReceiveItem": 5,
+		"PhysicalInventoryWriteOffStock": 6,
+		"PhysicalInventoryWriteOffWip": 7,
+		"ItemToSales": 8,
+		"MoveToLocation": 9,
+		"ScrapWip": 10,
+		"Disassemble": 32,
+		"ReturnStk": 33,
+		"WipToStock": 34,
+		"ReturnWip": 35,
+		"RecoverItem": 36,
+		"ReturnItem": 37,
+		"PhysicalInventoryRecoverStock": 38,
+		"PhysicalInventoryRecoverWip": 39,
+		"ItemFromSales": 40,
+		"MoveFromLocation": 41,
+		"RecoverWip": 42
+	},
+
+	"SerialLotTrackingType": {
+		"Lot": 1,
+		"Serialized": 2
+	},
+
+	"ShopDispatchStatus": {
+		"Unchanged": 0,
+		"DateChanged": 1,
+		"WorkCenterChanged": 2
+	},
+
+	"ShopOperationBatchAutoBuildOverride": {
+		"AsSpecified": 0,
+		"Never": 1,
+		"Zero": 2,
+		"Minimum": 3,
+		"Reorder": 4,
+		"Always": 5
+	},
+
+	"ShopOperationBatchEntryStatus": {
+		"NotPosted": 0,
+		"PostedOK": 1,
+		"ErrorNotPosted": 2
+	},
+
+	"ShopOperationBatchStatus": {
+		"NotPosted": 0,
+		"Modified": 1,
+		"Posted": 2,
+		"PostedWithErrors": 3
+	},
+
+	"ShopOperationBatchTransactionType": {
+		"Start": 0,
+		"Complete": 1,
+		"Time": 2,
+		"ScrapComponent": 3,
+		"ScrapAssembly": 4,
+		"DirectLabor": 5
+	},
+
+	"ShopPlanningStatus": {
+		"Unchanged": 0,
+		"DateChanged": 1,
+		"WorkCenterChanged": 2
+	},
+
+	"StockBasis": {
+		"StockOnly": 0,
+		"StockMinuReserve": 1,
+		"StockPlusOnOrder": 2,
+		"StockMinusReservePlusOnOorder": 3
+	},
+
+	"StockCategory": [
+		"Stock",
+		"Recieved",
+		"Used",
+		"Wip",
+		"Ordered",
+		"Reserved",
+
+		"Outside",
+
+		"Nowhere"
+	],
+
+	"StockCheckItemStatus": {
+		"Nominal": 0,
+		"Over": 1,
+		"Under": 2,
+		"Reorder": 3
+	},
+
+	"StockCheckItemType": {
+		"RawMaterials": 0,
+		"Resource": 1,
+		"Assembled": 2,
+		"BulkIssue": 3,
+		"OutsideProcessing": 4
+	},
+
+	"StockLevel": {
+		"SpecifiedQuantity": 0,
+		"SalesLevelsToZero": 1,
+		"SalesLevelsToOnSalesOrder": 2,
+		"SalesLevelsToMinimum": 3,
+		"SalesLevelsToReorder": 4,
+		"SalesLevelsToMaximum": 5,
+		"SalesLevelsToProjectedSales": 6,
+		"MISysLevelsToZero": 7,
+		"MISysLevelsToMinimum": 8,
+		"MISysLevelsToReorder": 9
+	},
+
+	"StockTransferAutoBuildOverride": {
+		"AsSpecified": 0,
+		"Never": 1,
+		"Zero": 2,
+		"Minimum": 3,
+		"Reorder": 4,
+		"Always": 5
+	},
+
+	"StockTransferBatchStatus": {
+		"NotPosted": 0,
+		"Modified": 1,
+		"Checked": 2,
+		"CheckedWithErrors": 3,
+		"Posted": 4,
+		"PostedWithErrors": 5
+	},
+
+	"StockTransferBatchTransactionType": {
+		"NoTransaction": 0,
+		"DispenseStock": 1,
+		"DispenseReserve": 2,
+		"ReserveItem": 3,
+		"ScrapItem": 4,
+		"AllocateFromStock": 5,
+		"AllocateFromReserve": 6,
+		"ReserveAssembly": 7,
+		"AssembleFromStock": 8,
+		"AssembleFromReserve": 9,
+		"AssembleFromWIP": 10,
+		"ReceiveFromSupplier": 11,
+		"ReceiveagainstPO": 12,
+		"ItemToSales": 13,
+		"DispenseBOMComponentsFromStock": 16,
+		"DispenseBOMComponentsFromReserve": 17,
+		"ReserveBOMComponents": 18,
+		"AllocateBulkItem": 23,
+		"MoveStock": 24,
+		"ScrapComponentWIP": 30
+	},
+
+	"StockTransferType": [
+		"DispenseStock",
+		"ReturnStock",
+		"ScrapStock",
+		"RecoverStock",
+		"AllocateStock",
+		"DeallocateStock",
+		"ReserveStock",
+		"RelieveStock",
+		"MoveStock",
+		"DispenseStockFromReserve",
+		"ReturnStockFromReserve",
+		"AllocateStockFromReserve",
+		"DeallocateStockFromReserve",
+
+		"AssembleFromStock",
+		"DisassembleFromStock",
+		"AssembleFromWip",
+		"DisassembleFromWip",
+		"AssembleFromReserve",
+		"DisassembleFromReserve",
+		"CommitAssembly",
+		"DecommitAssembly",
+		"ReserveAssembly",
+		"RelieveAssembly",
+
+		"ScrapWipComponent",
+		"RecoverWipComponent",
+
+		"DispenseComponents",
+		"ReturnComponents",
+		"ReserveComponents",
+		"RelieveComponents",
+		"DispenseComponentsFromReserve",
+		"ReturnComponentsFromReserve",
+
+		"ReceiveStockFromSupplier",
+		"ReturnStockFromSupplier",
+		"ReceiveStockFromPurchaseOrder",
+		"ReturnStockFromPurchaseOrder",
+
+		"TransferStockToSales",
+		"ReceiveStockFromSales"
+	],
+
+	"SupplierStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"TaxAuthorityBase": {
+		"Price": 1,
+		"UnitCost": 2,
+		"RecentCost": 3,
+		"AlternateAmount1": 4,
+		"AlternateAmount2": 5
+	},
+
+	"TaxAuthorityReportLevel": {
+		"None": 0,
+		"Invoice": 1
+	},
+
+	"TaxCalulationMethod": {
+		"Summary": 1,
+		"Detail": 2
+	},
+
+	"TaxClassClass": {
+		"Customers": 1,
+		"Items": 2
+	},
+
+	"TaxClassType": {
+		"Customers": 1,
+		"Items": 2
+	},
+
+	"TaxIncluded": {
+		"No": 0,
+		"Yes": 1
+	},
+
+	"TaxRateTransactionType": {
+		"Sales": 1,
+		"Purchases": 2
+	},
+
+	"TaxType": {
+		"FederalTax": 0,
+		"StateTax": 1,
+		"CountyTax": 2,
+		"CityTax": 3,
+		"GST": 4,
+		"PST": 5,
+		"HST": 6,
+		"VAT": 7,
+		"Other": 8
+	},
+
+	"ToolMonitoringUnit": {
+		"Cycles": 0,
+		"Hours": 1
+	},
+
+	"ToolStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"UserAccountStatus": {
+		"Active": 0,
+		"Inactive": 1,
+		"Locked": 2
+	},
+
+	"UserAccountType": {
+		"User": 0,
+		"Admin": 1,
+		"Timecard": 2
+	},
+
+	"UserPrefAutoBuildOverride": {
+		"AsSpecified": 0,
+		"Never": 1,
+		"Zero": 2,
+		"Minimum": 3,
+		"Reorder": 4
+	},
+
+	"UserPrefAvailableStock": {
+		"StockOnly": 0,
+		"StockPlusReserve": 1,
+		"StockPlusOnOrder": 2,
+		"StockPlusReservPlusOnOrder": 3,
+		"StockPlusWIP": 4,
+		"StockPlusReservePlusWIP": 5,
+		"StockPlusOnOrderPlusWIP": 6,
+		"StockPlusReservePlusOnOrderPlusWIP": 7
+	},
+
+	"UserPreferenceSortField": {
+		"ItemNumber": 0,
+		"ItemReference": 1,
+		"ItemPickSequence": 2,
+		"Location": 3
+	},
+
+	"UserPrefSelectionCriteria": {
+		"Item": 0,
+		"Cycle": 1,
+		"Date": 2
+	},
+
+	"WorkCenterResourceType": {
+		"Material": 0,
+		"Labor": 1,
+		"Overhead": 2
+	},
+
+	"WorkCenterStatus": {
+		"Active": 0,
+		"Inactive": 1
+	},
+
+	"WorkOrderDetailStatus": {
+		"Ready": 0,
+		"Started": 1,
+		"Completed": 2
+	},
+
+	"WorkOrderPriority": {
+		"Urgent": 0,
+		"High": 1,
+		"Normal": 2,
+		"Low": 3
+	},
+
+	"WorkOrderStatus": {
+		"Inactive": 0,
+		"Released": 1,
+		"Closed": 2
+	}
+
+	"MISysDevelopers": {
+		"Jeremy Merritt": 0,
+		"Nat Pierson": 1,
+		"John Wojtkielewicz": 2,
+		"Nelson Rooker": 3
+	}
+}

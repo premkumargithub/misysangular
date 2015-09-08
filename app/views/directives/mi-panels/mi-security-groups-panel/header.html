@@ -1,0 +1,15 @@
+<ng-include src="'views/directives/mi-panels/controls/navigate-prev-next.html'"></ng-include>
+			
+<div class="primary-fields">
+	<div class="row">
+		<div class="col-md-4">
+			<mi-text-field mi-field-property="Resources.SecurityGroup.Properties.ID" ng-model="securityGroup.ID" ng-readonly="mode === 'view' || mode === 'edit'" ng-required="true"></mi-text-field>
+		</div>
+		<div class="col-md-6">
+			<mi-text-field mi-field-property="Resources.SecurityGroup.Properties.Description" ng-model="securityGroup.Description" ng-readonly="mode === 'view'" ng-required="true"></mi-text-field>
+		</div>
+	</div>
+</div>
+
+<ng-include src="'views/directives/mi-panels/controls/save-cancel-delete.html'"></ng-include>
+<div class="clearfix"></div>

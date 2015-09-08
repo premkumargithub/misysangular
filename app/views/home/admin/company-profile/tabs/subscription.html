@@ -1,0 +1,108 @@
+<div ng-controller="CompanySubscriptionsCtrl" class="row">
+
+	<div class="row">
+		<div class="col-md-4">
+			<fieldset>
+				<!-- Components -->
+				<legend>Components</legend>
+
+				<mi-checkbox-field
+					mi-field-property="Resources.Company.CompanyProfile.Subscription.InventoryManagement"
+					ng-model="companyProfile.InventoryManagement"></mi-checkbox-field>
+				<mi-checkbox-field
+					mi-field-property="Resources.Company.CompanyProfile.Subscription.SalesManagement"
+					ng-model="companyProfile.SalesManagement"></mi-checkbox-field>
+				<mi-checkbox-field
+					mi-field-property="Resources.Company.CompanyProfile.Subscription.PurchaseManagement"
+					ng-model="companyProfile.PurchaseManagement"></mi-checkbox-field>
+				<mi-checkbox-field
+					mi-field-property="Resources.Company.CompanyProfile.Subscription.ProductionManagement"
+					ng-model="companyProfile.ProductionManagement"></mi-checkbox-field>
+				<mi-checkbox-field
+					mi-field-property="Resources.Company.CompanyProfile.Subscription.EventLogging"
+					ng-model="companyProfile.EventLogging"></mi-checkbox-field>
+				<mi-checkbox-field
+					mi-field-property="Resources.Company.CompanyProfile.Subscription.ProgrammersAPI"
+					ng-model="companyProfile.ProgrammersAPI"></mi-checkbox-field>
+
+				<mi-select-field
+					mi-field-property="Resources.Company.CompanyProfile.Properties.Integration"
+					ng-model="companyPreference.AccountingIntegration">
+				</mi-select-field>
+				
+				<mi-text-field 
+				mi-field-property="Resources.Company.CompanyProfile.Subscription.ConcurrentUsers"
+				ng-model="companyProfile.ConcurrentUsers">
+				</mi-text-field>
+			</fieldset>
+		</div>
+
+		<div class="col-md-4">
+			<fieldset>
+				<!-- Subscription -->
+				<legend>Subscription</legend>
+				<div>Your monthly subscription fee for components you have
+					selected is $278.</div>
+				<br /> <br />
+				<div>You might be able to save money if you enter a Promo Code
+					below.</div>
+
+				<div class="row no-stretch">
+					<div class="col-md-8">
+						<mi-text-field mi-field-property="Resources.Company.CompanyProfile.Subscription.PromoCode" ng-model="companyProfile.PromoCode"></mi-text-field>
+					</div>
+					<div class="col-md-4">
+						<br> <br>
+						<mi-button mi-button-text="Apply"></mi-button>
+					</div>
+				</div>
+				<br /> <br />
+				<div>If you don't have a Promo Code, please contact:</div>
+				<br /> <br />
+				<div style='text-align: center'>
+					Customer Service<br /> Manufacturing Information Systems, Inc.</br>
+					Tel. 802.457.4600</br> customerservice@misysinc.com
+				</div>
+				<!-- col-md-4 -->
+		</div>
+
+		<div class="col-md-4">
+			<fieldset>
+				<!-- Fees -->
+				<legend>Fees</legend>
+				<div class="primary-fields">
+					<p>
+						This Promo Code allows a 50% discount on the <br />selected
+						components until December 31, 2016
+					</p>
+					
+				
+					  <div class="col-sm-1">Regular Price:</div>
+					  <div class="col-sm-1">$ 278</div>
+				
+					
+					
+					  <div class="col-sm-1">Discount:</div>
+					  <div class="col-sm-1">-228</div>
+					
+					
+					
+					  <div class="col-sm-1">Net Price:</div>
+					  <div class="col-sm-1">$ 50</div>
+					
+					
+				</div>
+				<br /> <br />
+				<div style="text-align: center">
+					<font color="red" size="4"><b>You save: $228 !</b></font>
+				</div>
+				<br /> <br />
+				<p>Your next subscription payment will be $50.</p>
+			</fieldset>
+		</div>
+		<!-- col-md-4 -->
+	</div>
+	<div class="col-md-4"></div>
+	<!-- col-md-4 -->
+</div>
+<!-- row -->

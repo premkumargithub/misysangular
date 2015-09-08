@@ -1,0 +1,77 @@
+<div class="row no-stretch">
+	<div class="col-md-12">
+		<mi-textarea-supplier-field mi-field-property="Resources.Suppliers.Properties.PurchaseNote" ng-model="supplier.PurchaseNote" class="readonly" ng-readonly="true"></mi-textarea-supplier-field>
+	</div>
+</div>
+
+<div class="row no-stretch">
+	<div class="col-md-12">
+
+		<mi-textarea-supplier-field mi-field-property="Resources.Suppliers.Properties.InternalNote" ng-model="supplier.InternalNote" class="readonly"></mi-textarea-supplier-field>
+	</div>
+</div>
+<br>
+<div class="row no-stretch">
+	<div class="col-md-2">
+		<!--        <mi-select-field mi-field-property="Resources.Suppliers.Properties.DocumentSouce" ng-model="supplier.DocumentSouce"></mi-select-field>        -->
+		<label>Google Drive</label>
+	</div>
+	<!--        <mi-file-field class="readonly" mi-field-property="Resources.Suppliers.Properties.DocumentUpload" ng-model="supplier.DocumentUpload"></mi-file-field>-->
+	<div class="col-md-8">
+		<input type="text" class="form-control" ng-readonly="true" ng-model="googleDriveFiles" />
+	</div>
+	<div class="col-md-2">
+		<a href="javascript:;" lk-google-picker on-picked="onPicked" on-loaded="onLoaded" on-cancel="onCancel" class="btn btn-block col-md-3">Browse</a>
+	</div>
+</div>
+
+<br>
+<div class="row no-stretch">
+	<div class="col-md-2">
+		<!--        <mi-select-field mi-field-property="Resources.Suppliers.Properties.DocumentSouce" ng-model="supplier.DocumentSouce"></mi-select-field>        -->
+		<label>Dropbox</label>
+	</div>
+	<!--        <mi-file-field class="readonly" mi-field-property="Resources.Suppliers.Properties.DocumentUpload" ng-model="supplier.DocumentUpload"></mi-file-field>-->
+	<div class="col-md-8">
+		<input type="text" class="form-control" ng-readonly="true" ng-model="DropboxDriveFiles" />
+	</div>
+	<div class="col-md-2">
+		<a href="javascript:;"  class="btn btn-block col-md-3">Browse</a>
+	</div>
+</div>
+
+<br>
+<div class="row no-stretch">
+	<div class="col-md-2">
+		<!--        <mi-select-field mi-field-property="Resources.Suppliers.Properties.DocumentSouce" ng-model="supplier.DocumentSouce"></mi-select-field>        -->
+		<label>SkyDrive</label>
+	</div>
+	<!--        <mi-file-field class="readonly" mi-field-property="Resources.Suppliers.Properties.DocumentUpload" ng-model="supplier.DocumentUpload"></mi-file-field>-->
+	<div class="col-md-8">
+		<input type="text" class="form-control" ng-readonly="true" ng-model="SkyDriveFiles" />
+	</div>
+	<div class="col-md-2">
+		<a href="javascript:;" class="btn btn-block col-md-3">Browse</a>
+	</div>
+</div>
+
+<!--
+
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<mi-select-field mi-field-property="" ng-model="supplier.DocumentSouce"></mi-select-field>
+	</div>
+	<div class="col-md-8">
+		<mi-file-field class="readonly" mi-field-property="" ng-model="supplier.DocumentUpload"></mi-file-field>
+	</div>
+</div>
+
+
+<div class="row no-stretch">
+	<div class="col-md-4">
+		<mi-select-field mi-field-property="" ng-model="supplier.DocumentSouce"></mi-select-field>
+	</div>
+	<div class="col-md-8">
+		<mi-file-field class="readonly" mi-field-property="" ng-model="supplier.DocumentUpload"></mi-file-field>
+	</div>
+</div>-->

@@ -1,0 +1,14 @@
+{
+	"standard": {
+		"base": "/help/main/index.htm",
+		"base.login-template": "/help/login/index.htm",
+		"base.login-template.default": "/help/login/index.htm",
+		"base.login-template.password-recovery": "/help/login/index.htm",
+		"base.login-template.password-authorization": "/help/login/index.htm",
+		"base.login-template.password-security": "/help/login/index.htm",
+		"base.login-template.password-reset": "/help/login/index.htm"
+	},
+	"videos": {
+		"base": "/help/main/videos.html"
+	}
+}
